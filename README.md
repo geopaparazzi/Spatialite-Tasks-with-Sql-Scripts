@@ -10,4 +10,4 @@ Spatialite - usage of Sql-Scripts for everyday Tasks
 
 * most of this information will be found in the Wiki pages
 
-[['The Wiki Page index'|https://github.com/mj10777/Spatialite-Tasks-with-Sql-Scripts/wiki/_pages]]
+[['The Wiki Home Page as a starting point ...'|https://github.com/mj10777/Spatialite-Tasks-with-Sql-Scripts/wiki]]
