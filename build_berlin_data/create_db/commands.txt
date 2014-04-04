@@ -1,0 +1,8 @@
+
+--- build berlin_administration.db [no dependencies - move (not copy) into 'source_db/' when correct]
+-- spatialite berlin_administration.db < ../source_sql/create.berlin_admin_db.sql
+--- build berlin_segments.db [in 'source_db/': 'berlin_administration.db' and 'berlin_segments.db' ; move (not copy) into 'source_db/' when correct]
+spatialite berlin_segments.db  < ../source_sql/create.berlin_segments_db.sql
+
+
+
