@@ -30,4 +30,5 @@ SELECT * FROM berlin_ortsteil_segments WHERE GeometryType(soldner_segment) <> 'L
 SELECT DateTime('now'),'berlin_ortsteil_segments [finished]';
 SELECT DateTime('now'),'VACUUM';
 -- VACUUM;
-SELECT DateTime('now'),'All Done - finished [Habe fertig!]';
+SELECT DateTime('now'),'create.berlin_segments_db.sql [finished] [Habe fertig!]';
+

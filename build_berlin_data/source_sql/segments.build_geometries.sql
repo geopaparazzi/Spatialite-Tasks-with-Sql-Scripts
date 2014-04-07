@@ -242,23 +242,29 @@ UPDATE berlin_geometries SET soldner_polygon=
  SELECT CastToMultiPolygon(ST_Collect(geometries.soldner_polygon))
  FROM berlin_geometries AS geometries
  WHERE 
- (
-  (
-   (geometries.admin_level=10) AND
-   (berlin_geometries.valid_since BETWEEN geometries.valid_since AND geometries.valid_until)
+ ( 
+  ( -- valid time-frame 
+   (berlin_geometries.valid_since BETWEEN geometries.valid_since AND geometries.valid_until) AND
+    -- admin_level (ortsteil)
+   (geometries.admin_level=10)
   ) AND
-  (   
+  (
    geometries.id_admin IN
-   (
+   ( -- select ortsteil-geometry where ortsteil belongs to bezirk
+     -- when created, the ortsteil-geometry may not have belonged to this bezirk, check admin_table
     SELECT 
      id_admin
     FROM berlin_admin AS admin_ortsteile
     WHERE 
-    (
-     (admin_ortsteile.changed_type=2) AND
-     (admin_ortsteile.admin_level=geometries.admin_level) AND
+    ( -- same ortsteil in admin as polygon
      (admin_ortsteile.id_admin=geometries.id_admin) AND
-     (geometries.valid_since BETWEEN admin_ortsteile.valid_since AND admin_ortsteile.valid_until) 
+      -- only belongs_to record
+     (admin_ortsteile.changed_type=2) AND
+      -- same admin_level
+     (admin_ortsteile.admin_level=geometries.admin_level) AND
+      -- no checking for belongs_to [ortsteile belongs to a bezirk and not to 1911000001]
+      -- valid time-frame
+     (berlin_geometries.valid_since BETWEEN admin_ortsteile.valid_since AND admin_ortsteile.valid_until)
     )
    )
   )
@@ -293,24 +299,30 @@ UPDATE berlin_geometries SET soldner_segments=
  SELECT CastToMultiLinestring(ST_Collect(ST_ExteriorRing(geometries.soldner_ring))) 
  FROM berlin_geometries AS geometries
  WHERE 
- (
-  (
-   (geometries.admin_level=9) AND
-   (berlin_geometries.valid_until BETWEEN geometries.valid_since AND geometries.valid_until)
+ ( 
+  ( -- valid time-frame 
+   (berlin_geometries.valid_since BETWEEN geometries.valid_since AND geometries.valid_until) AND
+    -- admin_level (ortsteil)
+   (geometries.admin_level=10)
   ) AND
   (
    geometries.id_admin IN
-   (
+   ( -- select ortsteil-geometry where ortsteil belongs to bezirk
+     -- when created, the ortsteil-geometry may not have belonged to this bezirk, check admin_table
     SELECT 
      id_admin
     FROM berlin_admin AS admin_ortsteile
     WHERE 
-    (
-     (admin_ortsteile.changed_type=2) AND
-     (admin_ortsteile.admin_level=geometries.admin_level) AND
+    ( -- same ortsteil in admin as polygon
      (admin_ortsteile.id_admin=geometries.id_admin) AND
-     (berlin_geometries.id_admin=geometries.id_belongs_to) AND
-     (geometries.valid_until BETWEEN admin_ortsteile.valid_since AND admin_ortsteile.valid_until) 
+      -- only belongs_to record
+     (admin_ortsteile.changed_type=2) AND
+      -- same admin_level
+     (admin_ortsteile.admin_level=geometries.admin_level) AND
+      -- check of ortsteil now belongs to this bezirk
+     (berlin_geometries.id_admin=admin_ortsteile.id_belongs_to) AND
+      -- valid time-frame
+     (berlin_geometries.valid_since BETWEEN admin_ortsteile.valid_since AND admin_ortsteile.valid_until)
     )
    )
   )
@@ -325,24 +337,30 @@ UPDATE berlin_geometries SET soldner_polygon=
  SELECT CastToMultiPolygon(ST_Collect(geometries.soldner_ring))
  FROM berlin_geometries AS geometries
  WHERE 
- (
-  (
-   (geometries.admin_level=9) AND
-   (berlin_geometries.valid_until BETWEEN geometries.valid_since AND geometries.valid_until)
+ ( 
+  ( -- valid time-frame 
+   (berlin_geometries.valid_since BETWEEN geometries.valid_since AND geometries.valid_until) AND
+    -- admin_level (ortsteil)
+   (geometries.admin_level=9)
   ) AND
   (
    geometries.id_admin IN
-   (
+   ( -- select ortsteil-geometry where ortsteil belongs to bezirk
+     -- when created, the ortsteil-geometry may not have belonged to this bezirk, check admin_table
     SELECT 
      id_admin
     FROM berlin_admin AS admin_ortsteile
     WHERE 
-    (
-     (admin_ortsteile.changed_type=2) AND
-     (admin_ortsteile.admin_level=geometries.admin_level) AND
+    ( -- same ortsteil in admin as polygon
      (admin_ortsteile.id_admin=geometries.id_admin) AND
-     (admin_ortsteile.id_belongs_to=berlin_geometries.id_admin) AND
-     (geometries.valid_until BETWEEN admin_ortsteile.valid_since AND admin_ortsteile.valid_until) 
+      -- only belongs_to record
+     (admin_ortsteile.changed_type=2) AND
+      -- same admin_level
+     (admin_ortsteile.admin_level=geometries.admin_level) AND
+      -- check of ortsteil now belongs to this bezirk
+     (berlin_geometries.id_admin=admin_ortsteile.id_belongs_to) AND
+      -- valid time-frame
+     (berlin_geometries.valid_since BETWEEN admin_ortsteile.valid_since AND admin_ortsteile.valid_until)
     )
    )
   )

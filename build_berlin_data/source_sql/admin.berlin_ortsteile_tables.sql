@@ -182,10 +182,7 @@ INSERT INTO ortsteile_bezirke_work VALUES(1911000311,'Niederschönhausen (Gründ
 INSERT INTO ortsteile_bezirke_work VALUES(1911000312,'Rosenthal','10','1920-10-01','2000-12-31','2',1902011900,'Pankow');
 INSERT INTO ortsteile_bezirke_work VALUES(1911000312,'Rosenthal','10','2001-01-01','3000-01-01','2',1911000300,'Pankow');
 INSERT INTO ortsteile_bezirke_work VALUES(1911000312,'Rosenthal (Gründung von Groß Berlin - 1920-10-01)','10','1920-10-01','1938-03-31','3',1902011900,'Pankow');
-INSERT INTO ortsteile_bezirke_work VALUES(1911000313,'Wilhelmsruh','10','1938-04-01','2000-12-31','2',1902011900,'Pankow');
-INSERT INTO ortsteile_bezirke_work VALUES(1911000313,'Wilhelmsruh','10','1920-10-01','1938-03-31','2',1902012000,'Reinickendorf');
 INSERT INTO ortsteile_bezirke_work VALUES(1911000313,'Wilhelmsruh','10','2001-01-01','3000-01-01','2',1911000300,'Pankow');
-INSERT INTO ortsteile_bezirke_work VALUES(1911000313,'Wilhelmsruh (Gründung von Groß Berlin - 1920-10-01)','10','1920-10-01','1938-03-31','3',1902012000,'Reinickendorf');
 INSERT INTO ortsteile_bezirke_work VALUES(1911000401,'Charlottenburg','10','1920-10-01','2000-12-31','2',1902010700,'Charlottenburg');
 INSERT INTO ortsteile_bezirke_work VALUES(1911000401,'Charlottenburg','10','2001-01-01','3000-01-01','2',1911000400,'Charlottenburg-Wilmersdorf');
 INSERT INTO ortsteile_bezirke_work VALUES(1911000401,'Charlottenburg (Gründung von Groß Berlin - 1920-10-01)','10','1920-10-01','1938-03-31','3',1902010700,'Charlottenburg');
@@ -393,7 +390,8 @@ INSERT INTO ortsteile_bezirke_work VALUES(1911001208,'Lübars (Gründung von Gro
 INSERT INTO ortsteile_bezirke_work VALUES(1911001209,'Wittenau','10','1920-10-01','2000-12-31','2',1902012000,'Reinickendorf');
 INSERT INTO ortsteile_bezirke_work VALUES(1911001209,'Wittenau','10','2001-01-01','3000-01-01','2',1911001200,'Reinickendorf');
 INSERT INTO ortsteile_bezirke_work VALUES(1911001209,'Wittenau (Gründung von Groß Berlin - 1920-10-01)','10','1920-10-01','1938-03-31','3',1902012000,'Reinickendorf');
-INSERT INTO ortsteile_bezirke_work VALUES(1911001210,'Wilhelmsruhe (Märkisches Viertel)','10','1938-04-01','2000-12-31','2',1902012000,'Reinickendorf');
+INSERT INTO ortsteile_bezirke_work VALUES(1911001210,'Wilhelmsruh','10','1920-10-01','2000-12-31','2',1902012000,'Reinickendorf');
+INSERT INTO ortsteile_bezirke_work VALUES(1911001210,'Wilhelmsruh (Gründung von Groß Berlin - 1920-10-01)','10','1920-10-01','1938-03-31','3',1902012000,'Reinickendorf');
 INSERT INTO ortsteile_bezirke_work VALUES(1911001210,'Märkisches Viertel','10','2001-01-01','3000-01-01','2',1911001200,'Reinickendorf');
 INSERT INTO ortsteile_bezirke_work VALUES(1911001211,'Borsigwalde','10','2012-05-18','3000-01-01','2',1911001200,'Reinickendorf');
 ---
@@ -474,7 +472,7 @@ INSERT INTO ortsteile_bezirke_work VALUES('1911000404','Grunewald (Gebietsreform
 INSERT INTO ortsteile_bezirke_work VALUES('1902011000','Zehlendorf (Gebietsreform - 1938-04-01)','9','1938-04-01','1972-06-02','3','1911000001','Berlin');
 -- SELECT id_admin||''','''||name FROM berlin_admin WHERE ((changed_type=2) AND (id_belongs_to='1902011000'));
 --
-INSERT INTO ortsteile_bezirke_work VALUES('1911000604','Zehlendorf (Gebietsreform - 1938-04-01)','10','1938-04-01','1972-06-02','3','1902011000','Zehlendorf');
+INSERT INTO ortsteile_bezirke_work VALUES('1911000604','Zehlendorf (Gebietsreform - 1938-04-01)','10','1938-04-01','3000-01-01','3','1902011000','Zehlendorf');
 INSERT INTO ortsteile_bezirke_work VALUES('1911000605','Dahlem (Gebietsreform - 1938-04-01)','10','1938-04-01','3000-01-01','3','1902011000','Zehlendorf');
 INSERT INTO ortsteile_bezirke_work VALUES('1911000606','Nikolassee (Gebietsreform - 1938-04-01)','10','1938-04-01','3000-01-01','3','1902011000','Zehlendorf');
 INSERT INTO ortsteile_bezirke_work VALUES('1911000607','Wannsee (Gebietsreform - 1938-04-01)','10','1938-04-01','1972-06-02','3','1902011000','Zehlendorf');
@@ -547,7 +545,7 @@ INSERT INTO ortsteile_bezirke_work VALUES('1911000308','Blankenfelde (Gebietsref
 INSERT INTO ortsteile_bezirke_work VALUES('1911000309','Buch (Gebietsreform - 1938-04-01)','10','1938-04-01','3000-01-01','3','1902011900','Pankow');
 INSERT INTO ortsteile_bezirke_work VALUES('1911000310','Französisch Buchholz (Gebietsreform - 1938-04-01)','10','1938-04-01','3000-01-01','3','1902011900','Pankow');
 INSERT INTO ortsteile_bezirke_work VALUES('1911000311','Niederschönhausen (Gebietsreform - 1938-04-01)','10','1938-04-01','3000-01-01','3','1902011900','Pankow');
-INSERT INTO ortsteile_bezirke_work VALUES('1911000312','Rosenthal (Gebietsreform - 1938-04-01)','10','1938-04-01','3000-01-01','3','1902011900','Pankow');
+INSERT INTO ortsteile_bezirke_work VALUES('1911000312','Rosenthal (Gebietsreform - 1938-04-01)','10','1938-04-01','2000-12-31','3','1902011900','Pankow');
 ---
 INSERT INTO ortsteile_bezirke_work VALUES('1902012000','Reinickendorf (Gebietsreform - 1938-04-01)','9','1938-04-01','1972-06-02','3','1911000001','Berlin');
 --
@@ -560,6 +558,7 @@ INSERT INTO ortsteile_bezirke_work VALUES('1911001206','Hermsdorf (Gebietsreform
 INSERT INTO ortsteile_bezirke_work VALUES('1911001207','Waidmannslust (Gebietsreform - 1938-04-01)','10','1938-04-01','3000-01-01','3','1902012000','Reinickendorf');
 INSERT INTO ortsteile_bezirke_work VALUES('1911001208','Lübars (Gebietsreform - 1938-04-01)','10','1938-04-01','3000-01-01','3','1902012000','Reinickendorf');
 INSERT INTO ortsteile_bezirke_work VALUES('1911001209','Wittenau (Gebietsreform - 1938-04-01)','10','1938-04-01','2012-05-17','3','1902012000','Reinickendorf');
+INSERT INTO ortsteile_bezirke_work VALUES('1911001210','Wilhelmsruh (Gebietsreform - 1938-04-01)','10','1938-04-01','2000-12-31','3',1902012000,'Reinickendorf');
 ---
 INSERT INTO ortsteile_bezirke_work VALUES('1902012200','Hohenschönhausen (Gebietsreform - 1938-04-01)','9','1938-04-01','2001-12-31','3','1911000001','Berlin');
 --
@@ -573,7 +572,7 @@ INSERT INTO ortsteile_bezirke_work VALUES('1911001107','Wartenberg (Gebietsrefor
 INSERT INTO ortsteile_bezirke_work VALUES('1902010800','Spandau (Gebietsaustausch - 1945-08-31)','9','1945-08-31','1972-06-03','3','1911000001','Berlin');
 --
 INSERT INTO ortsteile_bezirke_work VALUES('1911000504','Staaken (Gebietsaustausch - 1945-08-31)','10','1945-08-31','1990-10-02','3','1902010800','Spandau');
-INSERT INTO ortsteile_bezirke_work VALUES('1911000505','Gatow (Gebietsaustausch - 1945-08-31)','10','1945-08-31','2000-12-31','3','1902010800','Spandau');
+INSERT INTO ortsteile_bezirke_work VALUES('1911000505','Gatow (Gebietsaustausch - 1945-08-31)','10','1945-08-31','3000-01-01','3','1902010800','Spandau');
 INSERT INTO ortsteile_bezirke_work VALUES('1911000506','Kladow (Gebietsaustausch - 1945-08-31)','10','1945-08-31','1988-06-30','3','1902010800','Spandau');
 INSERT INTO ortsteile_bezirke_work VALUES('1911000509','Wilhelmstadt (Gebietsaustausch - 1945-08-31)','10','1945-08-31','1988-06-30','3','1902010800','Spandau');
 ---
@@ -606,7 +605,7 @@ INSERT INTO ortsteile_bezirke_work VALUES('1911001203','Konradshöhe (Gebietsaus
 ---
 -- 1990-10-03 2000-12-31 (Wiedervereinigung - 1990-10-03)
 ---
-INSERT INTO ortsteile_bezirke_work VALUES('1902010800','Spandau (Wiedervereinigung - 1990-10-03)','9','1990-10-03','2002-12-31','3','1911000001','Berlin');
+INSERT INTO ortsteile_bezirke_work VALUES('1902010800','Spandau (Wiedervereinigung - 1990-10-03)','9','1990-10-03','2000-12-31','3','1911000001','Berlin');
 INSERT INTO ortsteile_bezirke_work VALUES('1911000504','Staaken (Wiedervereinigung - 1990-10-03)','10','1990-10-03','3000-01-01','3','1902010800','Spandau');
 ---
 -- 2001-01-01 3000-01-01 (neue Ortsteile)
@@ -670,7 +669,7 @@ ORDER BY valid_since,id_admin;
 UPDATE ortsteile_bezirke_temp SET changed_type='3';
 INSERT INTO ortsteile_bezirke_work
 SELECT
- id_admin,name,admin_level,valid_since,valid_until,changed_type,belongs_to,belongs_to
+ id_admin,name,admin_level,valid_since,valid_until,changed_type,id_belongs_to,belongs_to
 FROM ortsteile_bezirke_temp
 ORDER BY id_admin,changed_type,belongs_to,valid_since;
 DROP TABLE ortsteile_bezirke_temp;
@@ -679,13 +678,15 @@ DROP TABLE ortsteile_bezirke_temp;
 ---
 INSERT INTO ortsteile_bezirke_work VALUES('1911000104','Tiergarten (Ortsteil Hansaviertel - 2001-01-01)','10','2001-01-01','3000-01-01','3','1911000100','Mitte');
 INSERT INTO ortsteile_bezirke_work VALUES('1911000803','Buckow (Ortsteil Gropiusstadt - 2001-01-01)','10','2001-01-01','3000-01-01','3','1911000800','Neukölln');
+INSERT INTO ortsteile_bezirke_work VALUES('1911000312','Rosenthal (Ortsteil Wilhelmsruh - 2001-01-01)','10','2001-01-01','3000-01-01','3','1911000300','Pankow');
+-- INSERT INTO ortsteile_bezirke_work VALUES('1911000313','Wilhelmsruh (Ortsteil Wilhelmsruh - 2001-01-01)','10','2001-01-01','3000-01-01','3','11911000300','Pankow');
 INSERT INTO ortsteile_bezirke_work VALUES('1911001103','Lichtenberg (Ortsteil Fennpfuhl - 2001-01-01)','10','2001-01-01','3000-01-01','3','1911001100','Lichtenberg');
 INSERT INTO ortsteile_bezirke_work VALUES('1911000501','Spandau (Ortsteil Falkenhagener Feld - 2001-01-01)','10','2001-01-01','3000-01-01','3','1902010800','Spandau');
 INSERT INTO ortsteile_bezirke_work VALUES('1911000502','Haselhorst (Ortsteil Siemensstadt - 2001-01-01)','10','2001-01-01','3000-01-01','3','1902010800','Spandau');
 INSERT INTO ortsteile_bezirke_work VALUES('1911001103','Lichtenberg (Ortsteil Rummelsburg - 1938-04-01)','10','2002-01-01','3000-01-01','3','1911001100','Lichtenberg');
 INSERT INTO ortsteile_bezirke_work VALUES('1911000401','Charlottenburg (Ortsteile Westend,Charlottenburg-Nord - 2004-09-30)','10','2004-09-30','3000-01-01','3','1911000400','Charlottenburg-Wilmersdorf');
 INSERT INTO ortsteile_bezirke_work VALUES('1911000402','Wilmersdorf (Ortsteil Halensee - 2004-09-30)','10','2004-09-30','3000-01-01','3','1911000400','Charlottenburg-Wilmersdorf');
-INSERT INTO ortsteile_bezirke_work VALUES('1911001209','Wittenau (Ortsteile Borsigwalde - 2012-05-18)','10','2012-05-18','3000-01-01','3','1902012000','Reinickendorf');
+INSERT INTO ortsteile_bezirke_work VALUES('1911001209','Wittenau (Ortsteile Borsigwalde - 2012-05-18)','10','2012-05-18','3000-01-01','3','1911001200','Reinickendorf');
 SELECT DateTime('now'),'DROPing ortsteile_bezirke_temp [ortsteile belongs_to new bezirke]';
 ---
 COMMIT;
@@ -809,7 +810,7 @@ INSERT INTO berlin_admin
   ) AND
   (id_belongs_to NOT IN (1911000002,1911000003,1911000004,1911000005,1911000006,1911000007))
  )
- ORDER BY CAST(admin_level AS INT),id_admin,changed_type,id_belongs_to,valid_since;
+ ORDER BY CAST(admin_level AS INT),id_belongs_to,id_admin,changed_type,valid_since;
 SELECT DateTime('now'),'remove temp tables.';
 DROP TABLE berlin_admin_work;
 SELECT DateTime('now'),'creating admin views.';
@@ -886,7 +887,7 @@ CREATE VIEW berlin_borders_ortsteile AS
   ) AND
   (id_belongs_to NOT IN (1911000002,1911000003,1911000004,1911000005,1911000006,1911000007))
  )
- ORDER BY id_admin,valid_since;
+ ORDER BY id_belongs_to,id_admin,valid_since;
 ---
 COMMIT;
 SELECT DateTime('now'),'admin.berlin_ortsteile_tables [finished]';

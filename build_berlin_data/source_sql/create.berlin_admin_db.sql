@@ -13,4 +13,4 @@ SELECT DateTime('now'),'Updating Statistics';
 SELECT UpdateLayerStatistics();
 SELECT DateTime('now'),'VACUUM';
 VACUUM;
-SELECT DateTime('now'),'create.berlin_admin_db.sql - finished [Habe fertig!]';
+SELECT DateTime('now'),'create.berlin_admin_db.sql [finished] [Habe fertig!]';

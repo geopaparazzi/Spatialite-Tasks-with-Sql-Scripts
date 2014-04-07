@@ -65,7 +65,7 @@ CREATE VIEW berlin_borders_ortsteile AS
   ) AND
   (id_belongs_to NOT IN (1911000002,1911000003,1911000004,1911000005,1911000006,1911000007))
  )
- ORDER BY id_admin,valid_since;
+ ORDER BY id_belongs_to,id_admin,valid_since;
 ---
 SELECT DateTime('now'),'CreateViews: Spatial-Views of berlin_geometries of specific years';
 ---
