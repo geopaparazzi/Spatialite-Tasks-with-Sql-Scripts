@@ -161,9 +161,8 @@ INSERT INTO ortsteile_bezirke_work VALUES(1911000305,'Karow','10','1989-09-01','
 INSERT INTO ortsteile_bezirke_work VALUES(1911000305,'Karow','10','1920-10-01','1989-08-31','2',1902011900,'Pankow');
 INSERT INTO ortsteile_bezirke_work VALUES(1911000305,'Karow','10','2001-01-01','3000-01-01','2',1911000300,'Pankow');
 INSERT INTO ortsteile_bezirke_work VALUES(1911000305,'Karow (Gründung von Groß Berlin - 1920-10-01)','10','1920-10-01','1938-03-31','3',1902011900,'Pankow');
-INSERT INTO ortsteile_bezirke_work VALUES(1911000306,'Stadtrandsiedlung Malchow','10','1920-10-01','2000-12-31','2',1902011800,'Weißensee');
+INSERT INTO ortsteile_bezirke_work VALUES(1911000306,'Stadtrandsiedlung Malchow','10','1985-09-01','2000-12-31','2',1902011800,'Weißensee');
 INSERT INTO ortsteile_bezirke_work VALUES(1911000306,'Stadtrandsiedlung Malchow','10','2001-01-01','3000-01-01','2',1911000300,'Pankow');
-INSERT INTO ortsteile_bezirke_work VALUES(1911000306,'Stadtrandsiedlung Malchow (Gründung von Groß Berlin - 1920-10-01)','10','1920-10-01','1938-03-31','3',1902011800,'Weißensee');
 INSERT INTO ortsteile_bezirke_work VALUES(1911000307,'Pankow','10','1920-10-01','2000-12-31','2',1902011900,'Pankow');
 INSERT INTO ortsteile_bezirke_work VALUES(1911000307,'Pankow','10','2001-01-01','3000-01-01','2',1911000300,'Pankow');
 INSERT INTO ortsteile_bezirke_work VALUES(1911000307,'Pankow (Gründung von Groß Berlin - 1920-10-01)','10','1920-10-01','1938-03-31','3',1902011900,'Pankow');
@@ -348,15 +347,18 @@ INSERT INTO ortsteile_bezirke_work VALUES(1911001102,'Karlshorst (Gründung von 
 INSERT INTO ortsteile_bezirke_work VALUES(1911001103,'Lichtenberg','10','1920-10-01','2000-12-31','2',1902011700,'Lichtenberg');
 INSERT INTO ortsteile_bezirke_work VALUES(1911001103,'Lichtenberg','10','2001-01-01','3000-01-01','2',1911001100,'Lichtenberg');
 INSERT INTO ortsteile_bezirke_work VALUES(1911001103,'Lichtenberg (Gründung von Groß Berlin - 1920-10-01)','10','1920-10-01','1938-03-31','3',1902011700,'Lichtenberg');
-INSERT INTO ortsteile_bezirke_work VALUES(1911001104,'Falkenberg','10','1920-10-01','2000-12-31','2',1902012200,'Hohenschönhausen');
+INSERT INTO ortsteile_bezirke_work VALUES(1911001104,'Falkenberg','10','1920-10-01','1985-08-31','2',1902011800,'Weißensee');
+INSERT INTO ortsteile_bezirke_work VALUES(1911001104,'Falkenberg','10','1985-09-01','2000-12-31','2',1902012200,'Hohenschönhausen');
 INSERT INTO ortsteile_bezirke_work VALUES(1911001104,'Falkenberg','10','2001-01-01','3000-01-01','2',1911001100,'Lichtenberg');
 INSERT INTO ortsteile_bezirke_work VALUES(1911001104,'Falkenberg (Gründung von Groß Berlin - 1920-10-01)','10','1920-10-01','1938-03-31','3',1902012200,'Hohenschönhausen');
-INSERT INTO ortsteile_bezirke_work VALUES(1911001105,'Hohenschönhausen','10','1920-10-01','2000-12-31','2',1902012200,'Hohenschönhausen');
+INSERT INTO ortsteile_bezirke_work VALUES(1911001105,'Hohenschönhausen','10','1920-10-01','2000-12-31','2',1902011800,'Weißensee');
 INSERT INTO ortsteile_bezirke_work VALUES(1911001105,'Hohenschönhausen (Gründung von Groß Berlin - 1920-10-01)','10','1920-10-01','1938-03-31','3',1902012200,'Hohenschönhausen');
-INSERT INTO ortsteile_bezirke_work VALUES(1911001106,'Malchow','10','1920-10-01','2000-12-31','2',1902012200,'Hohenschönhausen');
+INSERT INTO ortsteile_bezirke_work VALUES(1911001106,'Malchow','10','1920-10-01','1985-08-31','2',1902011800,'Weißensee');
+INSERT INTO ortsteile_bezirke_work VALUES(1911001106,'Malchow','10','1985-09-01','2000-12-31','2',1902012200,'Hohenschönhausen');
 INSERT INTO ortsteile_bezirke_work VALUES(1911001106,'Malchow','10','2001-01-01','3000-01-01','2',1911001100,'Lichtenberg');
 INSERT INTO ortsteile_bezirke_work VALUES(1911001106,'Malchow (Gründung von Groß Berlin - 1920-10-01)','10','1920-10-01','1938-03-31','3',1902012200,'Hohenschönhausen');
-INSERT INTO ortsteile_bezirke_work VALUES(1911001107,'Wartenberg','10','1920-10-01','2000-12-31','2',1902012200,'Hohenschönhausen');
+INSERT INTO ortsteile_bezirke_work VALUES(1911001107,'Wartenberg','10','1920-10-01','1985-08-31','2',1902011800,'Weißensee');
+INSERT INTO ortsteile_bezirke_work VALUES(1911001107,'Wartenberg','10','1985-09-01','2000-12-31','2',1902012200,'Hohenschönhausen');
 INSERT INTO ortsteile_bezirke_work VALUES(1911001107,'Wartenberg','10','2001-01-01','3000-01-01','2',1911001100,'Lichtenberg');
 INSERT INTO ortsteile_bezirke_work VALUES(1911001107,'Wartenberg (Gründung von Groß Berlin - 1920-10-01)','10','1920-10-01','1938-03-31','3',1902012200,'Hohenschönhausen');
 INSERT INTO ortsteile_bezirke_work VALUES(1911001109,'Neu-Hohenschönhausen','10','2001-01-01','3000-01-01','2',1911001100,'Lichtenberg');
@@ -530,12 +532,15 @@ INSERT INTO ortsteile_bezirke_work VALUES('1911001101','Friedrichsfelde (Gebiets
 INSERT INTO ortsteile_bezirke_work VALUES('1911001102','Karlshorst (Gebietsreform - 1938-04-01)','10','1938-04-01','3000-01-01','3','1902011700','Lichtenberg');
 INSERT INTO ortsteile_bezirke_work VALUES('1911001103','Lichtenberg (Gebietsreform - 1938-04-01)','10','1938-04-01','2001-12-31','3','1902011700','Lichtenberg');
 ---
-INSERT INTO ortsteile_bezirke_work VALUES('1902011800','Weißensee (Gebietsreform - 1938-04-01)','9','1938-04-01','2001-12-31','3','1911000001','Berlin') ;
+INSERT INTO ortsteile_bezirke_work VALUES('1902011800','Weißensee (Gebietsreform - 1938-04-01)','9','1938-04-01','1985-08-31','3','1911000001','Berlin') ;
 --
-INSERT INTO ortsteile_bezirke_work VALUES('1911000302','Weißensee (Gebietsreform - 1938-04-01)','10','1938-04-01','3000-01-01','3','1902011800','Weißensee');
-INSERT INTO ortsteile_bezirke_work VALUES('1911000306','Stadtrandsiedlung Malchow (Gebietsreform - 1938-04-01)','10','1938-04-01','3000-01-01','3','1902011800','Weißensee');
+INSERT INTO ortsteile_bezirke_work VALUES('1911000302','Weißensee (Gebietsreform - 1938-04-01)','10','1938-04-01','1985-08-31','3','1902011800','Weißensee');
+INSERT INTO ortsteile_bezirke_work VALUES('1911001104','Falkenberg (Gebietsreform - 1938-04-01)','10','1938-04-01','1985-08-31','3','1902011800','Weißensee');
+INSERT INTO ortsteile_bezirke_work VALUES('1911001105','Hohenschönhausen (Gebietsreform - 1938-04-01)','10','1938-04-01','1985-08-31','3','1902011800','Weißensee');
+INSERT INTO ortsteile_bezirke_work VALUES('1911001106','Malchow (Gebietsreform - 1938-04-01)','10','1938-04-01','1985-08-31','3','1902011800','Weißensee');
+INSERT INTO ortsteile_bezirke_work VALUES('1911001107','Wartenberg (Gebietsreform - 1938-04-01)','10','1938-04-01','1985-08-31','3','1902011800','Weißensee');
 ---
-INSERT INTO ortsteile_bezirke_work VALUES('1902011900','Pankow (Gebietsreform - 1938-04-01)','9','1938-04-01','2001-12-31','3','1911000001','Berlin') ;
+INSERT INTO ortsteile_bezirke_work VALUES('1902011900','Pankow (Gebietsreform - 1938-04-01)','9','1938-04-01','1985-08-31','3','1911000001','Berlin') ;
 --
 INSERT INTO ortsteile_bezirke_work VALUES('1911000303','Blankenburg (Gebietsreform - 1938-04-01)','10','1938-04-01','3000-01-01','3','1902011900','Pankow');
 INSERT INTO ortsteile_bezirke_work VALUES('1911000304','Heinersdorf (Gebietsreform - 1938-04-01)','10','1938-04-01','3000-01-01','3','1902011900','Pankow');
@@ -560,13 +565,6 @@ INSERT INTO ortsteile_bezirke_work VALUES('1911001208','Lübars (Gebietsreform -
 INSERT INTO ortsteile_bezirke_work VALUES('1911001209','Wittenau (Gebietsreform - 1938-04-01)','10','1938-04-01','2012-05-17','3','1902012000','Reinickendorf');
 INSERT INTO ortsteile_bezirke_work VALUES('1911001210','Wilhelmsruh (Gebietsreform - 1938-04-01)','10','1938-04-01','2000-12-31','3',1902012000,'Reinickendorf');
 ---
-INSERT INTO ortsteile_bezirke_work VALUES('1902012200','Hohenschönhausen (Gebietsreform - 1938-04-01)','9','1938-04-01','2001-12-31','3','1911000001','Berlin');
---
-INSERT INTO ortsteile_bezirke_work VALUES('1911001104','Falkenberg (Gebietsreform - 1938-04-01)','10','1938-04-01','3000-01-01','3','1902012200','Hohenschönhausen');
-INSERT INTO ortsteile_bezirke_work VALUES('1911001105','Hohenschönhausen (Gebietsreform - 1938-04-01)','10','1938-04-01','3000-01-01','3','1902012200','Hohenschönhausen');
-INSERT INTO ortsteile_bezirke_work VALUES('1911001106','Malchow (Gebietsreform - 1938-04-01)','10','1938-04-01','3000-01-01','3','1902012200','Hohenschönhausen');
-INSERT INTO ortsteile_bezirke_work VALUES('1911001107','Wartenberg (Gebietsreform - 1938-04-01)','10','1938-04-01','3000-01-01','3','1902012200','Hohenschönhausen');
----
 -- 1945-08-31 1972-06-02  (Gebietsaustausch - 1945-08-31)
 ---
 INSERT INTO ortsteile_bezirke_work VALUES('1902010800','Spandau (Gebietsaustausch - 1945-08-31)','9','1945-08-31','1972-06-03','3','1911000001','Berlin');
@@ -576,7 +574,7 @@ INSERT INTO ortsteile_bezirke_work VALUES('1911000505','Gatow (Gebietsaustausch 
 INSERT INTO ortsteile_bezirke_work VALUES('1911000506','Kladow (Gebietsaustausch - 1945-08-31)','10','1945-08-31','1988-06-30','3','1902010800','Spandau');
 INSERT INTO ortsteile_bezirke_work VALUES('1911000509','Wilhelmstadt (Gebietsaustausch - 1945-08-31)','10','1945-08-31','1988-06-30','3','1902010800','Spandau');
 ---
--- 1972-06-03 1988-06-30 (Gebietsaustausch - 1972-06-03)
+-- 1972-06-03 1985-08-31 (Gebietsaustausch - 1972-06-03)
 ---
 INSERT INTO ortsteile_bezirke_work VALUES('1902010800','Spandau (Gebietsaustausch - 1972-06-03)','9','1972-06-03','1988-06-30','3','1911000001','Berlin');
 INSERT INTO ortsteile_bezirke_work VALUES('1911000507','Hakenfelde (Gebietsaustausch - 1972-06-03)','10','1972-06-03','1988-06-30','3','1902010800','Spandau');
@@ -584,6 +582,18 @@ INSERT INTO ortsteile_bezirke_work VALUES('1902011000','Zehlendorf (Gebietsausta
 INSERT INTO ortsteile_bezirke_work VALUES('1911000607','Wannsee (Gebietsaustausch - 1972-06-03)','10','1972-06-03','1988-06-30','3','1902011000','Zehlendorf');
 INSERT INTO ortsteile_bezirke_work VALUES('1902012000','Reinickendorf (Gebietsaustausch - 1972-06-03)','9','1972-06-03','1988-06-30','3','1911000001','Berlin');
 INSERT INTO ortsteile_bezirke_work VALUES('1911001205','Frohnau (Gebietsaustausch - 1972-06-03)','10','1972-06-03','3000-01-01','3','1902012000','Reinickendorf');
+---
+-- 1985-09-01 1988-06-30  (Gründung Bezirk Hohenschönhausen - 1985-09-01)
+---
+INSERT INTO ortsteile_bezirke_work VALUES('1902011800','Weißensee (Gründung Bezirk Hohenschönhausen - 1985-09-01)','9','1985-09-01','2001-12-31','3','1911000001','Berlin');
+INSERT INTO ortsteile_bezirke_work VALUES('1902012200','Hohenschönhausen (Gründung Bezirk Hohenschönhausen - 1985-09-01)','9','1985-09-01','2001-12-31','3','1911000001','Berlin');
+INSERT INTO ortsteile_bezirke_work VALUES('1911000302','Weißensee (Gründung Bezirk Hohenschönhausen - 1985-09-01)','10','1985-09-01','2001-12-31','3','1902011800','Weißensee');
+INSERT INTO ortsteile_bezirke_work VALUES('1911000306','Stadtrandsiedlung Malchow (Gründung Bezirk Hohenschönhausen - 1985-09-01)','10','1985-09-01','2001-12-31','3','1902011800','Weißensee');--
+INSERT INTO ortsteile_bezirke_work VALUES('1911001104','Falkenberg (Gründung Bezirk Hohenschönhausen - 1985-09-01)','10','1985-09-01','2001-12-31','3','1902012200','Hohenschönhausen');
+INSERT INTO ortsteile_bezirke_work VALUES('1911001105','Hohenschönhausen (Gründung Bezirk Hohenschönhausen - 1985-09-01)','10','1985-09-01','2001-12-31','3','1902012200','Hohenschönhausen');
+INSERT INTO ortsteile_bezirke_work VALUES('1911001106','Malchow (Gründung Bezirk Hohenschönhausen - 1985-09-01)','10','1985-09-01','2001-12-31','3','1902012200','Hohenschönhausen');
+INSERT INTO ortsteile_bezirke_work VALUES('1911001107','Wartenberg (Gründung Bezirk Hohenschönhausen - 1985-09-01)','10','1985-09-01','2001-12-31','3','1902012200','Hohenschönhausen');
+---
 ---
 -- 1988-07-01 1990-10-02 (Gebietsaustausch - 1988-07-01)
 ---
