@@ -62,7 +62,7 @@ UPDATE berlin_geometries SET soldner_segments=
  ( 
   (berlin_geometries.id_geometry=geometries.id_geometry) AND
   (
-   (geometries.valid_since BETWEEN segments.valid_since AND segments.valid_until) AND
+   (geometries.valid_until BETWEEN segments.valid_since AND segments.valid_until) AND
    (segments.belongs_to_01||','||segments.belongs_to_02 LIKE '%'||geometries.id_admin||'%') 
   )
  ) 
@@ -80,7 +80,7 @@ UPDATE berlin_geometries SET soldner_segments=
  ( 
   (berlin_geometries.id_geometry=geometries.id_geometry) AND
   (   
-   (geometries.valid_since BETWEEN segments.valid_since AND segments.valid_until) AND
+   (geometries.valid_until BETWEEN segments.valid_since AND segments.valid_until) AND
    (segments.belongs_to_01||','||segments.belongs_to_02 LIKE '%1902010%') 
   )
  )
@@ -95,11 +95,8 @@ UPDATE berlin_geometries SET soldner_segments=
  berlin_geometries AS geometries 
  WHERE  
  ( 
-  (geometries.admin_level=4) AND (geometries.valid_since < '1920-10-01') AND (geometries.valid_until = '1912-03-31') AND 
-
   (
-   (berlin_geometries.valid_since BETWEEN geometries.valid_since AND geometries.valid_until) AND
-   (berlin_geometries.valid_since BETWEEN segments.valid_since AND segments.valid_until) AND
+   ('1912-03-31' BETWEEN segments.valid_since AND segments.valid_until) AND
    (segments.belongs_to_01||','||segments.belongs_to_02 LIKE '%'||geometries.id_admin||'%') 
   )
  )
@@ -116,7 +113,7 @@ UPDATE berlin_geometries SET soldner_segments=
  (
   (berlin_geometries.id_geometry=geometries.id_geometry) AND 
   (
-   (geometries.valid_since BETWEEN segments.valid_since AND segments.valid_until) AND
+   (geometries.valid_until BETWEEN segments.valid_since AND segments.valid_until) AND
    (segments.belongs_to_01||','||segments.belongs_to_02 LIKE '%'||geometries.id_admin||'%') 
   )
  )
@@ -147,7 +144,7 @@ UPDATE berlin_geometries SET soldner_segments=
  WHERE 
  ( 
   ( -- valid time-frame 
-   (berlin_geometries.valid_since BETWEEN geometries.valid_since AND geometries.valid_until) AND
+   (berlin_geometries.valid_until BETWEEN geometries.valid_since AND geometries.valid_until) AND
     -- admin_level (ortsteil)
    (geometries.admin_level=10)
   ) AND
@@ -185,7 +182,7 @@ UPDATE berlin_geometries SET soldner_polygon=
  WHERE 
  ( 
   ( -- valid time-frame 
-   (berlin_geometries.valid_since BETWEEN geometries.valid_since AND geometries.valid_until) AND
+   (berlin_geometries.valid_until BETWEEN geometries.valid_since AND geometries.valid_until) AND
     -- admin_level (ortsteil)
    (geometries.admin_level=10)
   ) AND
@@ -224,9 +221,8 @@ UPDATE berlin_geometries SET soldner_segments=
  WHERE  
  (
   (
-   ((geometries.admin_level=10) AND (geometries.valid_since >= '1920-10-01')) AND
    (berlin_geometries.id_geometry=geometries.id_geometry) AND 
-   (berlin_geometries.valid_since BETWEEN geometries.valid_since AND geometries.valid_until) 
+   (geometries.valid_until BETWEEN geometries.valid_since AND geometries.valid_until) 
   ) AND
   (
    (geometries.valid_since BETWEEN segments.valid_since AND segments.valid_until) 
@@ -244,7 +240,7 @@ UPDATE berlin_geometries SET soldner_polygon=
  WHERE 
  ( 
   ( -- valid time-frame 
-   (berlin_geometries.valid_since BETWEEN geometries.valid_since AND geometries.valid_until) AND
+   (berlin_geometries.valid_until BETWEEN geometries.valid_since AND geometries.valid_until) AND
     -- admin_level (ortsteil)
    (geometries.admin_level=10)
   ) AND
@@ -296,14 +292,14 @@ SELECT DateTime('now'),'Creating: berlin_geometries.soldner_segments [Berlin-Bez
 -- correct: must run after Ring-Polygons
 UPDATE berlin_geometries SET soldner_segments=
 (
- SELECT CastToMultiLinestring(ST_Collect(ST_ExteriorRing(geometries.soldner_ring))) 
+ SELECT CastToMultiLinestring(ST_Collect(ST_ExteriorRing(geometries.soldner_segments))) 
  FROM berlin_geometries AS geometries
  WHERE 
  ( 
   ( -- valid time-frame 
-   (berlin_geometries.valid_since BETWEEN geometries.valid_since AND geometries.valid_until) AND
+   (berlin_geometries.valid_until BETWEEN geometries.valid_since AND geometries.valid_until) AND
     -- admin_level (ortsteil)
-   (geometries.admin_level=10)
+   (geometries.admin_level=9)
   ) AND
   (
    geometries.id_admin IN
@@ -339,7 +335,7 @@ UPDATE berlin_geometries SET soldner_polygon=
  WHERE 
  ( 
   ( -- valid time-frame 
-   (berlin_geometries.valid_since BETWEEN geometries.valid_since AND geometries.valid_until) AND
+   (berlin_geometries.valid_until BETWEEN geometries.valid_since AND geometries.valid_until) AND
     -- admin_level (ortsteil)
    (geometries.admin_level=9)
   ) AND
@@ -371,6 +367,150 @@ WHERE ((admin_level=9) AND (id_admin=1911000001) AND (valid_since >= '1920-10-01
 UPDATE berlin_geometries SET soldner_ring=CastToMultiPolygon(ST_UnaryUnion(soldner_polygon))
 WHERE ((admin_level=9) AND (id_admin=1911000001) AND (valid_since >= '1920-10-01'));
 ---
+SELECT DateTime('now'),'Creating: [Berlin-Bezirke] of Sektoren ';
+UPDATE berlin_geometries SET soldner_segments=
+(
+ SELECT CastToMultiLinestring(ST_Collect(soldner_segments)) 
+ FROM berlin_geometries AS geometries
+ WHERE 
+ ( 
+  ( -- valid time-frame 
+   (berlin_geometries.valid_since BETWEEN geometries.valid_since AND geometries.valid_until) AND
+    -- admin_level (ortsteil)
+   (geometries.admin_level=9)
+  ) AND
+  (
+   geometries.id_admin IN
+   ( -- select ortsteil-geometry where ortsteil belongs to bezirk
+     -- when created, the ortsteil-geometry may not have belonged to this bezirk, check admin_table
+    SELECT 
+     id_admin
+    FROM berlin_admin AS admin_ortsteile
+    WHERE 
+    ( -- same ortsteil in admin as polygon
+     (admin_ortsteile.id_admin=geometries.id_admin) AND
+      -- only belongs_to record
+     (admin_ortsteile.changed_type=2) AND
+      -- same admin_level
+     (admin_ortsteile.admin_level=geometries.admin_level) AND
+      -- check of ortsteil now belongs to this bezirk
+     (berlin_geometries.id_admin=admin_ortsteile.id_belongs_to) 
+    )
+   )
+  )
+ )
+)
+WHERE ((admin_level=9) AND (id_admin IN (1911000004,1911000005,1911000006,1911000007)) AND (valid_since >= '1920-10-01'));
+---
+UPDATE berlin_geometries SET soldner_polygon=
+(
+ SELECT CastToMultiPolygon(ST_Collect(geometries.soldner_ring))
+ FROM berlin_geometries AS geometries
+ WHERE 
+ ( 
+  ( -- valid time-frame 
+   (berlin_geometries.valid_since BETWEEN geometries.valid_since AND geometries.valid_until) AND
+    -- admin_level (ortsteil)
+   (geometries.admin_level=9)
+  ) AND
+  (
+   geometries.id_admin IN
+   ( -- select ortsteil-geometry where ortsteil belongs to bezirk
+     -- when created, the ortsteil-geometry may not have belonged to this bezirk, check admin_table
+    SELECT 
+     id_admin
+    FROM berlin_admin AS admin_ortsteile
+    WHERE 
+    ( -- same ortsteil in admin as polygon
+     (admin_ortsteile.id_admin=geometries.id_admin) AND
+      -- only belongs_to record
+     (admin_ortsteile.changed_type=2) AND
+      -- same admin_level
+     (admin_ortsteile.admin_level=geometries.admin_level) AND
+      -- check of ortsteil now belongs to this bezirk
+     (berlin_geometries.id_admin=admin_ortsteile.id_belongs_to) 
+    )
+   )
+  )
+ )
+)
+WHERE ((admin_level=9) AND (id_admin IN (1911000004,1911000005,1911000006,1911000007)) AND (valid_since >= '1920-10-01'));
+--
+UPDATE berlin_geometries SET soldner_ring=CastToMultiPolygon(ST_UnaryUnion(soldner_polygon))
+WHERE ((admin_level=9) AND (id_admin IN (1911000004,1911000005,1911000006,1911000007)) AND (valid_since >= '1920-10-01'));
+---
+SELECT DateTime('now'),'Creating: [Berlin-Bezirke] of West/Ost ';
+UPDATE berlin_geometries SET soldner_segments=
+(
+ SELECT CastToMultiLinestring(ST_Collect(soldner_segments)) 
+ FROM berlin_geometries AS geometries
+ WHERE 
+ ( 
+  ( -- valid time-frame 
+   (berlin_geometries.valid_since BETWEEN geometries.valid_since AND geometries.valid_until) AND
+    -- admin_level (ortsteil)
+   (geometries.admin_level=9)
+  ) AND
+  (
+   geometries.id_admin IN
+   ( -- select ortsteil-geometry where ortsteil belongs to bezirk
+     -- when created, the ortsteil-geometry may not have belonged to this bezirk, check admin_table
+    SELECT 
+     id_admin
+    FROM berlin_admin AS admin_ortsteile
+    WHERE 
+    ( -- same ortsteil in admin as polygon
+     (admin_ortsteile.id_admin=geometries.id_admin) AND
+      -- only belongs_to record
+     (admin_ortsteile.changed_type=2) AND
+      -- same admin_level
+     (admin_ortsteile.admin_level=geometries.admin_level) AND
+      -- check of ortsteil now belongs to this bezirk
+     (berlin_geometries.id_admin=admin_ortsteile.id_belongs_to) 
+    )
+   )
+  )
+ )
+)
+WHERE ((admin_level=9) AND (id_admin IN (1911000002,1911000003)) AND (valid_since >= '1920-10-01'));
+---
+UPDATE berlin_geometries SET soldner_polygon=
+(
+ SELECT CastToMultiPolygon(ST_Collect(geometries.soldner_ring))
+ FROM berlin_geometries AS geometries
+ WHERE 
+ ( 
+  ( -- valid time-frame 
+   (berlin_geometries.valid_since BETWEEN geometries.valid_since AND geometries.valid_until) AND
+    -- admin_level (ortsteil)
+   (geometries.admin_level=9)
+  ) AND
+  (
+   geometries.id_admin IN
+   ( -- select ortsteil-geometry where ortsteil belongs to bezirk
+     -- when created, the ortsteil-geometry may not have belonged to this bezirk, check admin_table
+    SELECT 
+     id_admin
+    FROM berlin_admin AS admin_ortsteile
+    WHERE 
+    ( -- same ortsteil in admin as polygon
+     (admin_ortsteile.id_admin=geometries.id_admin) AND
+      -- only belongs_to record
+     (admin_ortsteile.changed_type=2) AND
+      -- same admin_level
+     (admin_ortsteile.admin_level=geometries.admin_level) AND
+      -- check of ortsteil now belongs to this bezirk
+     (berlin_geometries.id_admin=admin_ortsteile.id_belongs_to) 
+    )
+   )
+  )
+ )
+)
+WHERE ((admin_level=9) AND (id_admin IN (1911000002,1911000003)) AND (valid_since >= '1920-10-01'));
+--
+UPDATE berlin_geometries SET soldner_ring=CastToMultiPolygon(ST_UnaryUnion(soldner_polygon))
+WHERE ((admin_level=9) AND (id_admin IN (1911000002,1911000003)) AND (valid_since >= '1920-10-01'));
+---
 SELECT DateTime('now'),'Creating: berlin_geometries.soldner_center Center - Length and Areas of Polygon';
 UPDATE berlin_geometries SET soldner_center=ST_Centroid(soldner_polygon);
 UPDATE berlin_geometries SET meters_area=ST_Area(soldner_polygon);
@@ -380,5 +520,160 @@ UPDATE berlin_geometries SET meters_length=ST_Perimeter(soldner_ring);
 -- SELECT ST_Length(soldner_segments) AS meters_length_linestring,ST_Perimeter(soldner_ring) AS meters_length_ring,ST_Perimeter(soldner_polygon) AS meters_length_polygon FROM berlin_geometries WHERE id_geometry=101;
 COMMIT;
 ---
+SELECT DateTime('now'),'Creating: berlin_geometries_null - where Polygons could not be created';
+SELECT 
+ 'segments_null='||(SELECT Count(*) FROM berlin_geometries WHERE ((soldner_segments IS NULL))) AS segments_null,
+ 'polygons_null='||(SELECT Count(*) FROM berlin_geometries WHERE ((soldner_segments IS NOT NULL) AND (soldner_polygon IS NULL))) AS polygons_null,
+ 'count_null='||(SELECT Count(*) FROM berlin_geometries WHERE ((soldner_segments IS NULL) OR (soldner_polygon IS NULL))) AS count_null,
+ 'not_null='||(SELECT Count(*) FROM berlin_geometries WHERE ((soldner_segments IS NOT NULL) AND (soldner_polygon IS NOT NULL))) AS not_null,
+ 'count_geometries='||(SELECT Count(*) FROM berlin_geometries ) AS count_geometries;
+---
+CREATE TABLE berlin_geometries_null AS
+ SELECT id_geometry,id_admin,name,
+ ST_LineMerge(soldner_segments) AS line_merge, 
+ ST_IsSimple
+ (
+  ST_LineMerge(soldner_segments)
+ ) AS is_simple,
+ ST_IsClosed
+ (
+  ST_LineMerge(soldner_segments)
+ ) AS is_closed,
+ AsEWKT
+ (
+  (
+   SELECT ST_StartPoint
+   (
+    ST_LineMerge(soldner_segments)
+   )
+  )
+ ) AS point_start,
+ AsEWKT
+ (
+  (
+   SELECT ST_EndPoint
+   (
+    ST_LineMerge(soldner_segments)
+   )
+  )
+ ) AS point_end,
+ ST_Equals
+ ( 
+  (
+   SELECT ST_StartPoint
+   (
+    ST_LineMerge(soldner_segments)
+   )
+  ),
+  (
+   SELECT ST_EndPoint
+   (
+    ST_LineMerge(soldner_segments)
+   )
+  )
+ ) AS is_equal,
+ admin_level,valid_since,valid_until,
+ soldner_polygon
+ FROM berlin_geometries 
+ WHERE 
+ ((soldner_segments IS NOT NULL) AND (soldner_polygon IS NULL) AND (ST_IsSimple(ST_LineMerge(soldner_segments))));
+INSERT INTO berlin_geometries_null 
+ SELECT id_geometry,id_admin,name,
+ ST_LineMerge(soldner_segments) AS line_merge, 
+ ST_IsSimple
+ (
+  ST_LineMerge(soldner_segments)
+ ) AS is_simple,
+ ST_IsClosed
+ (
+  ST_LineMerge(soldner_segments)
+ ) AS is_closed,
+ AsEWKT
+ (
+  (
+   SELECT ST_StartPoint
+   (
+    ST_LineMerge(soldner_segments)
+   )
+  )
+ ) AS point_start,
+ AsEWKT
+ (
+  (
+   SELECT ST_EndPoint
+   (
+    ST_LineMerge(soldner_segments)
+   )
+  )
+ ) AS point_end,
+ ST_Equals
+ ( 
+  (
+   SELECT ST_StartPoint
+   (
+    ST_LineMerge(soldner_segments)
+   )
+  ),
+  (
+   SELECT ST_EndPoint
+   (
+    ST_LineMerge(soldner_segments)
+   )
+  )
+ ) AS is_equal,
+ admin_level,valid_since,valid_until,
+ soldner_polygon
+ FROM berlin_geometries 
+ WHERE 
+ ((soldner_segments IS NOT NULL) AND (soldner_polygon IS NULL) AND (NOT ST_IsSimple(ST_LineMerge(soldner_segments))));
+INSERT INTO berlin_geometries_null 
+ SELECT id_geometry,id_admin,name,
+ ST_LineMerge(soldner_segments) AS line_merge, 
+ ST_IsSimple
+ (
+  ST_LineMerge(soldner_segments)
+ ) AS is_simple,
+ ST_IsClosed
+ (
+  ST_LineMerge(soldner_segments)
+ ) AS is_closed,
+ AsEWKT
+ (
+  (
+   SELECT ST_StartPoint
+   (
+    ST_LineMerge(soldner_segments)
+   )
+  )
+ ) AS point_start,
+ AsEWKT
+ (
+  (
+   SELECT ST_EndPoint
+   (
+    ST_LineMerge(soldner_segments)
+   )
+  )
+ ) AS point_end,
+ ST_Equals
+ ( 
+  (
+   SELECT ST_StartPoint
+   (
+    ST_LineMerge(soldner_segments)
+   )
+  ),
+  (
+   SELECT ST_EndPoint
+   (
+    ST_LineMerge(soldner_segments)
+   )
+  )
+ ) AS is_equal,
+ admin_level,valid_since,valid_until,
+ soldner_polygon
+ FROM berlin_geometries 
+ WHERE 
+ (soldner_segments IS NULL);
 SELECT DateTime('now'),'segments.build_geometries.sql [finished]';
 ---

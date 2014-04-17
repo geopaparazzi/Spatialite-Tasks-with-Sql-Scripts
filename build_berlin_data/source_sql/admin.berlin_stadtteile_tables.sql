@@ -52,7 +52,9 @@ INSERT INTO berlin_stadt_work VALUES('1902041602','Friedrichshagen','9','1753-05
 INSERT INTO berlin_stadt_work VALUES('1902041603','Rahnsdorf','9','1375-01-01','1920-09-30','2','1902040000','Niederbarnim');
 INSERT INTO berlin_stadt_work VALUES('1902041603','Rahnsdorf','9','1375-01-01','1920-09-30','3','1902040000','Niederbarnim');
 INSERT INTO berlin_stadt_work VALUES('1902041701','Lichtenberg','4','1288-05-24','1920-09-30','2','1902040000','Niederbarnim');
-INSERT INTO berlin_stadt_work VALUES('1902041701','Lichtenberg','4','1288-05-24','1920-09-30','3','1902040000','Niederbarnim');
+INSERT INTO berlin_stadt_work VALUES('1902041701','Lichtenberg','4','1288-05-24','1878-03-29','3','1902040000','Niederbarnim');
+INSERT INTO berlin_stadt_work VALUES('1902041701','Lichtenberg (Zentralviehof)','4','1878-03-30','1912-03-31','3','1902040000','Niederbarnim');
+INSERT INTO berlin_stadt_work VALUES('1902041701','Lichtenberg (Boxhagen-Rummelsburg)','4','1912-04-01','1920-09-30','3','1902040000','Niederbarnim');
 INSERT INTO berlin_stadt_work VALUES('1902041702','Friedrichsfelde','9','1265-01-01','1920-09-30','2','1902040000','Niederbarnim');
 INSERT INTO berlin_stadt_work VALUES('1902041702','Friedrichsfelde','9','1265-01-01','1920-09-30','3','1902040000','Niederbarnim');
 INSERT INTO berlin_stadt_work VALUES('1902041703','Biesdorf','9','1375-01-01','1920-09-30','2','1902040000','Niederbarnim');
@@ -261,33 +263,44 @@ INSERT INTO berlin_stadt_work VALUES('1911000001','Berlin (Eingemeindung Zentral
 INSERT INTO berlin_stadt_work VALUES('1911000001','Berlin (Eingemeindung Tiergarten)','4','1881-01-15','1915-01-28','3','1902000000','Preußen');
 INSERT INTO berlin_stadt_work VALUES('1911000001','Berlin (mit Umgebung 1912-03-31)','4','1881-01-15','1912-03-31','3','1902000000','Preußen');
 INSERT INTO berlin_stadt_work VALUES('1911000001','Berlin (Eingemeindung Plötzensee)','4','1915-01-29','1920-09-30','3','1902000000','Preußen');
+-- major changes since 1920-10-01 [Bezirke and Ortsteile]
 INSERT INTO berlin_stadt_work VALUES('1911000001','Berlin Bezirke (Gründung von Groß Berlin - 1920-10-01)','9','1920-10-01','1928-11-29','3','1902000000','Preußen');
-INSERT INTO berlin_stadt_work VALUES('1911000001','Berlin Bezirke (Eingemeindung Düppel - 1928-11-30)','9','1928-11-30','1938-03-31','3','1902000000','Preußen');
-INSERT INTO berlin_stadt_work VALUES('1911000001','Berlin Bezirke (Gebietsreform - 1938-04-01)','9','1938-04-01','1945-08-30','3','1902000000','Preußen');
-INSERT INTO berlin_stadt_work VALUES('1911000001','Berlin Bezirke (Gebietsaustausch - 1945-08-31)','9','1945-08-31','1972-06-02','3','1902000000','Preußen');
-INSERT INTO berlin_stadt_work VALUES('1911000001','Berlin Bezirke (Gebietsaustausch - 1972-06-03)','9','1972-06-03','1985-08-31','3','1902000000','Preußen');
-INSERT INTO berlin_stadt_work VALUES('1911000001','Berlin Bezirke (Bezirk Hohenschönhausen - 1988-07-01)','9','1985-09-01','1988-06-30','3','1902000000','Preußen');
-INSERT INTO berlin_stadt_work VALUES('1911000001','Berlin Bezirke (Gebietsaustausch - 1988-07-01)','9','1988-07-01','1990-10-02','3','1902000000','Preußen');
-INSERT INTO berlin_stadt_work VALUES('1911000001','Berlin Bezirke (Wiedervereinigung - 1990-10-03)','9','1990-10-03','2000-12-31','3','1902000000','Preußen');
-INSERT INTO berlin_stadt_work VALUES('1911000001','Berlin Bezirke (Bezirksreform - 2001-01-01)','9','2001-01-01','3001-01-01','3','1902000000','Preußen');
 INSERT INTO berlin_stadt_work VALUES('1911000001','Berlin Ortsteile (Gründung von Groß Berlin - 1920-10-01)','10','1920-10-01','1928-11-29','3','1902000000','Preußen');
+INSERT INTO berlin_stadt_work VALUES('1911000001','Berlin Bezirke (Eingemeindung Düppel - 1928-11-30)','9','1928-11-30','1938-03-31','3','1902000000','Preußen');
 INSERT INTO berlin_stadt_work VALUES('1911000001','Berlin Ortsteile (Eingemeindung Düppel - 1928-11-30)','10','1928-11-30','1938-03-31','3','1902000000','Preußen');
+INSERT INTO berlin_stadt_work VALUES('1911000001','Berlin Bezirke (Gebietsreform - 1938-04-01)','9','1938-04-01','1945-08-30','3','1902000000','Preußen');
 INSERT INTO berlin_stadt_work VALUES('1911000001','Berlin Ortsteile (Gebietsreform - 1938-04-01)','10','1938-04-01','1945-08-30','3','1902000000','Preußen');
+INSERT INTO berlin_stadt_work VALUES('1911000001','Berlin Bezirke (Gebietsaustausch - 1945-08-31)','9','1945-08-31','1972-06-02','3','1902000000','Preußen');
 INSERT INTO berlin_stadt_work VALUES('1911000001','Berlin Ortsteile (Gebietsaustausch 1945)','10','1945-08-31','1972-06-02','3','1902000000','Preußen');
+INSERT INTO berlin_stadt_work VALUES('1911000001','Berlin Bezirke (Gebietsaustausch - 1972-06-03)','9','1972-06-03','1979-01-04','3','1902000000','Preußen');
 INSERT INTO berlin_stadt_work VALUES('1911000001','Berlin Ortsteile (Gebietsaustausch - 1972-06-03)','10','1972-06-03','1985-08-31','3','1902000000','Preußen');
-INSERT INTO berlin_stadt_work VALUES('1911000001','Berlin Ortsteile (Bezirk Hohenschönhausen - 1988-07-01)','10','1985-09-01','1988-06-30','3','1902000000','Preußen');
+INSERT INTO berlin_stadt_work VALUES('1911000001','Berlin Bezirke (Bezirk Marzahn - 1979-01-05)','9','1979-01-05','1985-08-31','3','1902000000','Preußen');
+INSERT INTO berlin_stadt_work VALUES('1911000001','Berlin Ortsteile (Bezirk Marzahn - 1979-01-05)','10','1979-01-05','1985-08-31','3','1902000000','Preußen');
+INSERT INTO berlin_stadt_work VALUES('1911000001','Berlin Bezirke (Bezirk Hohenschönhausen - 1985-09-01)','9','1985-09-01','1986-05-31','3','1902000000','Preußen');
+INSERT INTO berlin_stadt_work VALUES('1911000001','Berlin Ortsteile (Bezirk Hohenschönhausen - 1985-09-01)','10','1985-09-01','1986-05-31','3','1902000000','Preußen');
+INSERT INTO berlin_stadt_work VALUES('1911000001','Berlin Bezirke (Bezirk Hellersdorf - 1986-06-01)','9','1986-06-01','1988-06-30','3','1902000000','Preußen');
+INSERT INTO berlin_stadt_work VALUES('1911000001','Berlin Ortsteile (Bezirk Hellersdorf - 1986-06-01)','10','1986-06-01','1988-06-30','3','1902000000','Preußen');
+INSERT INTO berlin_stadt_work VALUES('1911000001','Berlin Bezirke (Gebietsaustausch - 1988-07-01)','9','1988-07-01','1990-10-02','3','1902000000','Preußen');
 INSERT INTO berlin_stadt_work VALUES('1911000001','Berlin Ortsteile (Gebietsaustausch - 1988-07-01)','10','1988-07-01','1990-10-02','3','1902000000','Preußen');
+INSERT INTO berlin_stadt_work VALUES('1911000001','Berlin Bezirke (Wiedervereinigung - 1990-10-03)','9','1990-10-03','2000-12-31','3','1902000000','Preußen');
 INSERT INTO berlin_stadt_work VALUES('1911000001','Berlin Ortsteile (Wiedervereinigung - 1990-10-03)','10','1990-10-03','2000-12-31','3','1902000000','Preußen');
+INSERT INTO berlin_stadt_work VALUES('1911000001','Berlin Bezirke (Bezirksreform - 2001-01-01)','9','2001-01-01','2001-12-31','3','1902000000','Preußen');
 INSERT INTO berlin_stadt_work VALUES('1911000001','Berlin Ortsteile (Bezirksreform - 2001-01-01)','10','2001-01-01','2001-12-31','3','1902000000','Preußen');
+---
+INSERT INTO berlin_stadt_work VALUES('1911000001','Berlin Bezirke (Ortsteil Rummelsburg - 2002-01-01)','9','2002-01-01','2004-09-29','3','1902000000','Preußen');
 INSERT INTO berlin_stadt_work VALUES('1911000001','Berlin Ortsteile (Ortsteil Rummelsburg - 2002-01-01)','10','2002-01-01','2004-09-29','3','1902000000','Preußen');
+INSERT INTO berlin_stadt_work VALUES('1911000001','Berlin Bezirke (Ortsteile Westend,Charlottenburg-Nord,Halensee - 2004-09-30)','9','2004-09-30','2012-05-17','3','1902000000','Preußen');
 INSERT INTO berlin_stadt_work VALUES('1911000001','Berlin Ortsteile (Ortsteile Westend,Charlottenburg-Nord,Halensee - 2004-09-30)','10','2004-09-30','2012-05-17','3','1902000000','Preußen');
+INSERT INTO berlin_stadt_work VALUES('1911000001','Berlin Bezirke (Ortsteil Borsigwalde - 2012-05-18)','9','2012-05-18','3000-01-01','3','1902000000','Preußen');
 INSERT INTO berlin_stadt_work VALUES('1911000001','Berlin Ortsteile (Ortsteil Borsigwalde - 2012-05-18)','10','2012-05-18','3000-01-01','3','1902000000','Preußen');
+---
 INSERT INTO berlin_stadt_work VALUES('1911000002','Berlin (West) [Selbständige politische Einheit Westberlin] - Bezirke','9','1945-08-31','1990-10-02','3','1911000001','Berlin');
 INSERT INTO berlin_stadt_work VALUES('1911000003','Berlin (Ost) [Hauptstadt der DDR] - Bezirke','9','1945-08-31','1990-10-02','3','1911000001','Berlin');
 -- Neukölln, Kreuzberg, Tempelhof, Schöneberg, Steglitz und Zehlendorf
 INSERT INTO berlin_stadt_work VALUES('1911000004','amerikanische Sektor - Bezirke','9','1945-08-31','1990-10-02','3','1911000002','Berlin (West)');
 INSERT INTO berlin_stadt_work VALUES('1911000004','amerikanische Sektor - Ortsteile','10','1945-08-31','1990-10-02','3','1911000002','Berlin (West)');
 INSERT INTO berlin_stadt_work VALUES('1902011400','Neukölln','9','1945-08-31','1990-10-02','2','1911000004','amerikanische Sektor');
+INSERT INTO berlin_stadt_work VALUES('1902011300','Tempelhof','9','1945-08-31','1990-10-02','2','1911000004','amerikanische Sektor');
 INSERT INTO berlin_stadt_work VALUES('1902010600','Kreuzberg','9','1945-08-31','1990-10-02','2','1911000004','amerikanische Sektor');
 INSERT INTO berlin_stadt_work VALUES('1902011100','Schöneberg','9','1945-08-31','1990-10-02','2','1911000004','amerikanische Sektor');
 INSERT INTO berlin_stadt_work VALUES('1902011200','Steglitz','9','1945-08-31','1990-10-02','2','1911000004','amerikanische Sektor');

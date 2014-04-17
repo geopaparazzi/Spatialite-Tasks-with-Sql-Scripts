@@ -42,7 +42,7 @@ CREATE VIEW berlin_borders_bezirke AS
   (changed_type = 3) AND
   -- bezirke since '1920-09-30'
   (admin_level IN (9)) AND
-  (id_belongs_to NOT IN (1911000002,1911000003,1902040000,1902060000,1902100000))
+  (id_belongs_to NOT IN (1902040000,1902060000,1902100000))
  )
  ORDER BY id_admin,valid_since;
 -- stadtteile,ortsteile
@@ -65,7 +65,7 @@ CREATE VIEW berlin_borders_ortsteile AS
   ) AND
   (id_belongs_to NOT IN (1911000002,1911000003,1911000004,1911000005,1911000006,1911000007))
  )
- ORDER BY id_belongs_to,id_admin,valid_since;
+ ORDER BY id_admin,valid_since,id_belongs_to;
 ---
 SELECT DateTime('now'),'CreateViews: Spatial-Views of berlin_geometries of specific years';
 ---
@@ -392,7 +392,7 @@ SELECT *
 FROM berlin_geometries segments
 WHERE
 (
- ('2012-05-17' BETWEEN segments.valid_since AND segments.valid_until)
+ ('2001-01-01' BETWEEN segments.valid_since AND segments.valid_until)
 ) AND
 soldner_segments IS NOT NULL
 ORDER BY name;
@@ -400,6 +400,23 @@ ORDER BY name;
 INSERT INTO views_geometry_columns
  (view_name,view_geometry,view_rowid,f_table_name,f_geometry_column,read_only)
  VALUES ('geometries_berlin_1990','soldner_segments','id_geometry','berlin_geometries','soldner_segments',1);
+---
+-- --
+CREATE VIEW geometries_berlin_2001 AS
+-- 'Berlin (Bezirksreform 2001)' AS name,
+-- '2001-01-01' AS valid_from --- '2012-05-17' AS valid_to
+SELECT *
+FROM berlin_geometries segments
+WHERE
+(
+ ('2012-05-17' BETWEEN segments.valid_since AND segments.valid_until)
+) AND
+soldner_segments IS NOT NULL
+ORDER BY name;
+---
+INSERT INTO views_geometry_columns
+ (view_name,view_geometry,view_rowid,f_table_name,f_geometry_column,read_only)
+ VALUES ('geometries_berlin_2001','soldner_segments','id_geometry','berlin_geometries','soldner_segments',1);
 ---
 -- --
 CREATE VIEW geometries_berlin_2012 AS

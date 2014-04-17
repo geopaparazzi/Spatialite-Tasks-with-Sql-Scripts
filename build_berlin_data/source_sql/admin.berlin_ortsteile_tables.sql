@@ -47,7 +47,7 @@ INSERT INTO bezirke_stadt VALUES(1902010800,'Spandau (Gründung von Groß Berlin
 INSERT INTO bezirke_stadt VALUES(1902010800,'Spandau','9','1920-10-01','2000-12-31','2',1911000001,'Berlin');
 INSERT INTO bezirke_stadt VALUES(1902010900,'Wilmersdorf (Gründung von Groß Berlin - 1920-10-01)','9','1920-10-01','1938-03-31','3',1911000001,'Berlin');
 INSERT INTO bezirke_stadt VALUES(1902010900,'Wilmersdorf','9','1920-10-01','2000-12-31','2',1911000001,'Berlin');
-INSERT INTO bezirke_stadt VALUES(1902011000,'Zehlendorf (Gründung von Groß Berlin - 1920-10-01)','9','1920-10-01','1938-03-31','3',1911000001,'Berlin');
+INSERT INTO bezirke_stadt VALUES(1902011000,'Zehlendorf (Gründung von Groß Berlin - 1920-10-01)','9','1920-10-01','1928-11-29','3',1911000001,'Berlin');
 INSERT INTO bezirke_stadt VALUES(1902011000,'Zehlendorf','9','1920-10-01','2000-12-31','2',1911000001,'Berlin');
 INSERT INTO bezirke_stadt VALUES(1902011100,'Schöneberg (Gründung von Groß Berlin - 1920-10-01)','9','1920-10-01','1938-03-31','3',1911000001,'Berlin');
 INSERT INTO bezirke_stadt VALUES(1902011100,'Schöneberg','9','1920-10-01','2000-12-31','2',1911000001,'Berlin');
@@ -89,7 +89,8 @@ INSERT INTO bezirke_stadt VALUES(1911000600,'Steglitz-Zehlendorf (Bezirksreform 
 INSERT INTO bezirke_stadt VALUES(1911000700,'Tempelhof-Schöneberg','9','2001-01-01','3000-01-01','2',1911000001,'Berlin');
 INSERT INTO bezirke_stadt VALUES(1911000700,'Tempelhof-Schöneberg (Bezirksreform 2001-01-01)','9','2001-01-01','3000-01-01','3',1911000001,'Berlin');
 INSERT INTO bezirke_stadt VALUES(1911000800,'Neukölln','9','2001-01-01','3000-01-01','2',1911000001,'Berlin');
-INSERT INTO bezirke_stadt VALUES(1911000800,'Neukölln (Ortsteil Gropiusstadt - 2001-01-01)','9','2001-01-01','3000-01-01','3',1911000001,'Berlin');
+INSERT INTO bezirke_stadt VALUES(1911000800,'Neukölln (Bezirksreform 2001-01-01)','9','2001-01-01','2002-11-06','3',1911000001,'Berlin');
+INSERT INTO bezirke_stadt VALUES(1911000800,'Neukölln (Ortsteil Gropiusstadt - 2002-11-07)','9','2002-11-07','3000-01-01','3',1911000001,'Berlin');
 INSERT INTO bezirke_stadt VALUES(1911000900,'Treptow-Köpenick','9','2001-01-01','3000-01-01','2',1911000001,'Berlin');
 INSERT INTO bezirke_stadt VALUES(1911000900,'Treptow-Köpenick (Bezirksreform 2001-01-01)','9','2001-01-01','3000-01-01','3',1911000001,'Berlin');
 INSERT INTO bezirke_stadt VALUES(1911001000,'Marzahn-Hellersdorf','9','2001-01-01','3000-01-01','2',1911000001,'Berlin');
@@ -149,16 +150,16 @@ INSERT INTO ortsteile_bezirke_work VALUES(1911000301,'Prenzlauer Berg (Gründung
 INSERT INTO ortsteile_bezirke_work VALUES(1911000302,'Weißensee','10','1920-10-01','2000-12-31','2',1902011800,'Weißensee');
 INSERT INTO ortsteile_bezirke_work VALUES(1911000302,'Weißensee','10','2001-01-01','3000-01-01','2',1911000300,'Pankow');
 INSERT INTO ortsteile_bezirke_work VALUES(1911000302,'Weißensee (Gründung von Groß Berlin - 1920-10-01)','10','1920-10-01','1938-03-31','3',1902011800,'Weißensee');
-INSERT INTO ortsteile_bezirke_work VALUES(1911000303,'Blankenburg','10','1989-09-01','2000-12-31','2',1902011800,'Weißensee');
-INSERT INTO ortsteile_bezirke_work VALUES(1911000303,'Blankenburg','10','1920-10-01','1989-08-31','2',1902011900,'Pankow');
+INSERT INTO ortsteile_bezirke_work VALUES(1911000303,'Blankenburg','10','1985-09-01','2000-12-31','2',1902011800,'Weißensee');
+INSERT INTO ortsteile_bezirke_work VALUES(1911000303,'Blankenburg','10','1920-10-01','1985-08-31','2',1902011900,'Pankow');
 INSERT INTO ortsteile_bezirke_work VALUES(1911000303,'Blankenburg','10','2001-01-01','3000-01-01','2',1911000300,'Pankow');
 INSERT INTO ortsteile_bezirke_work VALUES(1911000303,'Blankenburg (Gründung von Groß Berlin - 1920-10-01)','10','1920-10-01','1938-03-31','3',1902011900,'Pankow');
-INSERT INTO ortsteile_bezirke_work VALUES(1911000304,'Heinersdorf','10','1989-09-01','2000-12-31','2',1902011800,'Weißensee');
-INSERT INTO ortsteile_bezirke_work VALUES(1911000304,'Heinersdorf','10','1920-10-01','1989-08-31','2',1902011900,'Pankow');
+INSERT INTO ortsteile_bezirke_work VALUES(1911000304,'Heinersdorf','10','1985-09-01','2000-12-31','2',1902011800,'Weißensee');
+INSERT INTO ortsteile_bezirke_work VALUES(1911000304,'Heinersdorf','10','1920-10-01','1985-08-31','2',1902011900,'Pankow');
 INSERT INTO ortsteile_bezirke_work VALUES(1911000304,'Heinersdorf','10','2001-01-01','3000-01-01','2',1911000300,'Pankow');
 INSERT INTO ortsteile_bezirke_work VALUES(1911000304,'Heinersdorf (Gründung von Groß Berlin - 1920-10-01)','10','1920-10-01','1938-03-31','3',1902011900,'Pankow');
-INSERT INTO ortsteile_bezirke_work VALUES(1911000305,'Karow','10','1989-09-01','2000-12-31','2',1902011800,'Weißensee');
-INSERT INTO ortsteile_bezirke_work VALUES(1911000305,'Karow','10','1920-10-01','1989-08-31','2',1902011900,'Pankow');
+INSERT INTO ortsteile_bezirke_work VALUES(1911000305,'Karow','10','1985-09-01','2000-12-31','2',1902011800,'Weißensee');
+INSERT INTO ortsteile_bezirke_work VALUES(1911000305,'Karow','10','1920-10-01','1985-08-31','2',1902011900,'Pankow');
 INSERT INTO ortsteile_bezirke_work VALUES(1911000305,'Karow','10','2001-01-01','3000-01-01','2',1911000300,'Pankow');
 INSERT INTO ortsteile_bezirke_work VALUES(1911000305,'Karow (Gründung von Groß Berlin - 1920-10-01)','10','1920-10-01','1938-03-31','3',1902011900,'Pankow');
 INSERT INTO ortsteile_bezirke_work VALUES(1911000306,'Stadtrandsiedlung Malchow','10','1985-09-01','2000-12-31','2',1902011800,'Weißensee');
@@ -271,7 +272,7 @@ INSERT INTO ortsteile_bezirke_work VALUES(1911000803,'Buckow (Gründung von Gro�
 INSERT INTO ortsteile_bezirke_work VALUES(1911000804,'Rudow','10','1920-10-01','2000-12-31','2',1902011400,'Neukölln');
 INSERT INTO ortsteile_bezirke_work VALUES(1911000804,'Rudow','10','2001-01-01','3000-01-01','2',1911000800,'Neukölln');
 INSERT INTO ortsteile_bezirke_work VALUES(1911000804,'Rudow (Gründung von Groß Berlin - 1920-10-01)','10','1920-10-01','1938-03-31','3',1902011400,'Neukölln');
-INSERT INTO ortsteile_bezirke_work VALUES(1911000805,'Gropiusstadt','10','2001-01-01','3000-01-01','2',1911000800,'Neukölln');
+INSERT INTO ortsteile_bezirke_work VALUES(1911000805,'Gropiusstadt','10','2002-11-07','3000-01-01','2',1911000800,'Neukölln');
 INSERT INTO ortsteile_bezirke_work VALUES(1911000901,'Treptow','10','1920-10-01','2000-12-31','2',1902011500,'Treptow');
 INSERT INTO ortsteile_bezirke_work VALUES(1911000901,'Alt-Treptow','10','2001-01-01','3000-01-01','2',1911000900,'Treptow-Köpenick');
 INSERT INTO ortsteile_bezirke_work VALUES(1911000901,'Treptow (Gründung von Groß Berlin - 1920-10-01)','10','1920-10-01','1938-03-31','3',1902011500,'Treptow');
@@ -317,6 +318,8 @@ INSERT INTO ortsteile_bezirke_work VALUES(1911000914,'Müggelheim (Gründung von
 INSERT INTO ortsteile_bezirke_work VALUES(1911000915,'Schmöckwitz','10','1920-10-01','2000-12-31','2',1902011600,'Köpenick');
 INSERT INTO ortsteile_bezirke_work VALUES(1911000915,'Schmöckwitz','10','2001-01-01','3000-01-01','2',1911000900,'Treptow-Köpenick');
 INSERT INTO ortsteile_bezirke_work VALUES(1911000915,'Schmöckwitz (Gründung von Groß Berlin - 1920-10-01)','10','1920-10-01','1938-03-31','3',1902011600,'Köpenick');
+INSERT INTO ortsteile_bezirke_work VALUES(1911001001,'Marzahn','10','1920-10-01','1979-01-04','2',1902011700,'Lichtenberg');
+INSERT INTO ortsteile_bezirke_work VALUES(1911001001,'Marzahn (Gründung von Groß Berlin - 1920-10-01)','10','1920-10-01','1979-01-04','3',1902011700,'Lichtenberg');
 INSERT INTO ortsteile_bezirke_work VALUES(1911001001,'Marzahn','10','1979-01-05','2000-12-31','2',1902012100,'Marzahn');
 INSERT INTO ortsteile_bezirke_work VALUES(1911001001,'Marzahn','10','2001-01-01','3000-01-01','2',1911001000,'Marzahn-Hellersdorf');
 INSERT INTO ortsteile_bezirke_work VALUES(1911001002,'Biesdorf','10','1920-10-01','1979-01-04','2',1902011700,'Lichtenberg');
@@ -337,7 +340,7 @@ INSERT INTO ortsteile_bezirke_work VALUES(1911001005,'Hellersdorf','10','1920-10
 INSERT INTO ortsteile_bezirke_work VALUES(1911001005,'Hellersdorf','10','1979-01-05','1986-05-31','2',1902012100,'Marzahn');
 INSERT INTO ortsteile_bezirke_work VALUES(1911001005,'Hellersdorf','10','1986-06-01','2000-12-31','2',1902012300,'Hellersdorf');
 INSERT INTO ortsteile_bezirke_work VALUES(1911001005,'Hellersdorf','10','2001-01-01','3000-01-01','2',1911001000,'Marzahn-Hellersdorf');
-INSERT INTO ortsteile_bezirke_work VALUES(1911001005,'Hellersdorf (Gründung von Groß Berlin - 1920-10-01)','10','1920-10-01','1938-03-31','3',1902011700,'Lichtenberg');
+INSERT INTO ortsteile_bezirke_work VALUES(1911001005,'Hellersdorf (Gründung von Groß Berlin - 1920-10-01)','10','1920-10-01','1979-01-04','3',1902011700,'Lichtenberg');
 INSERT INTO ortsteile_bezirke_work VALUES(1911001101,'Friedrichsfelde','10','1920-10-01','2000-12-31','2',1902011700,'Lichtenberg');
 INSERT INTO ortsteile_bezirke_work VALUES(1911001101,'Friedrichsfelde','10','2001-01-01','3000-01-01','2',1911001100,'Lichtenberg');
 INSERT INTO ortsteile_bezirke_work VALUES(1911001101,'Friedrichsfelde (Gründung von Groß Berlin - 1920-10-01)','10','1920-10-01','1938-03-31','3',1902011700,'Lichtenberg');
@@ -360,6 +363,7 @@ INSERT INTO ortsteile_bezirke_work VALUES(1911001106,'Malchow (Gründung von Gro
 INSERT INTO ortsteile_bezirke_work VALUES(1911001107,'Wartenberg','10','1920-10-01','1985-08-31','2',1902011800,'Weißensee');
 INSERT INTO ortsteile_bezirke_work VALUES(1911001107,'Wartenberg','10','1985-09-01','2000-12-31','2',1902012200,'Hohenschönhausen');
 INSERT INTO ortsteile_bezirke_work VALUES(1911001107,'Wartenberg','10','2001-01-01','3000-01-01','2',1911001100,'Lichtenberg');
+
 INSERT INTO ortsteile_bezirke_work VALUES(1911001107,'Wartenberg (Gründung von Groß Berlin - 1920-10-01)','10','1920-10-01','1938-03-31','3',1902012200,'Hohenschönhausen');
 INSERT INTO ortsteile_bezirke_work VALUES(1911001109,'Neu-Hohenschönhausen','10','2001-01-01','3000-01-01','2',1911001100,'Lichtenberg');
 INSERT INTO ortsteile_bezirke_work VALUES(1911001110,'Alt-Hohenschönhausen','10','2001-01-01','3000-01-01','2',1911001100,'Lichtenberg');
@@ -432,28 +436,28 @@ INSERT INTO ortsteile_bezirke_work VALUES('1902010200','Tiergarten (Gebietsrefor
 INSERT INTO ortsteile_bezirke_work VALUES('1911000102','Moabit (Gebietsreform - 1938-04-01)','10','1938-04-01','3000-01-01','3','1902010200','Tiergarten');
 INSERT INTO ortsteile_bezirke_work VALUES('1911000104','Tiergarten (Gebietsreform - 1938-04-01)','10','1938-04-01','1988-06-30','3','1902010200','Tiergarten');
 ---
-INSERT INTO ortsteile_bezirke_work VALUES('1902010300','Wedding (Gebietsreform - 1938-04-01)','9','1938-04-01','2001-12-31','3','1911000001','Berlin') ;
+INSERT INTO ortsteile_bezirke_work VALUES('1902010300','Wedding (Gebietsreform - 1938-04-01)','9','1938-04-01','1988-06-30','3','1911000001','Berlin');
 --
-INSERT INTO ortsteile_bezirke_work VALUES('1911000105','Wedding (Gebietsreform - 1938-04-01)','10','1938-04-01','3000-01-01','3','1902010300','Wedding');
+INSERT INTO ortsteile_bezirke_work VALUES('1911000105','Wedding (Gebietsreform - 1938-04-01)','10','1938-04-01','1988-06-30','3','1902010300','Wedding');
 INSERT INTO ortsteile_bezirke_work VALUES('1911000106','Gesundbrunnen (Gebietsreform - 1938-04-01)','10','1938-04-01','3000-01-01','3','1902010300','Wedding');
 ---
-INSERT INTO ortsteile_bezirke_work VALUES('1902010400','Prenzlauer Berg (Gebietsreform - 1938-04-01)','9','1938-04-01','2001-12-31','3','1911000001','Berlin') ;
+INSERT INTO ortsteile_bezirke_work VALUES('1902010400','Prenzlauer Berg (Gebietsreform - 1938-04-01)','9','1938-04-01','2000-12-31','3','1911000001','Berlin');
 --
 INSERT INTO ortsteile_bezirke_work VALUES('1911000301','Prenzlauer Berg (Gebietsreform - 1938-04-01)','10','1938-04-01','3000-01-01','3','1902010400','Prenzlauer Berg');
 ---
-INSERT INTO ortsteile_bezirke_work VALUES('1902010500','Friedrichshain (Gebietsreform - 1938-04-01)','9','1938-04-01','2001-12-31','3','1911000001','Berlin') ;
+INSERT INTO ortsteile_bezirke_work VALUES('1902010500','Friedrichshain (Gebietsreform - 1938-04-01)','9','1938-04-01','2000-12-31','3','1911000001','Berlin');
 --
 INSERT INTO ortsteile_bezirke_work VALUES('1911000201','Friedrichshain (Gebietsreform - 1938-04-01)','10','1938-04-01','3000-01-01','3','1902010500','Friedrichshain');
 ---
-INSERT INTO ortsteile_bezirke_work VALUES('1902010600','Kreuzberg (Gebietsreform - 1938-04-01)','9','1938-04-01','1988-06-30','3','1911000001','Berlin') ;
+INSERT INTO ortsteile_bezirke_work VALUES('1902010600','Kreuzberg (Gebietsreform - 1938-04-01)','9','1938-04-01','1988-06-30','3','1911000001','Berlin');
 --
 INSERT INTO ortsteile_bezirke_work VALUES('1911000202','Kreuzberg (Gebietsreform - 1938-04-01)','10','1938-04-01','1988-06-30','3','1902010600','Kreuzberg');
 ---
-INSERT INTO ortsteile_bezirke_work VALUES('1902010700','Charlottenburg (Gebietsreform - 1938-04-01)','9','1938-04-01','2001-12-31','3','1911000001','Berlin');
+INSERT INTO ortsteile_bezirke_work VALUES('1902010700','Charlottenburg (Gebietsreform - 1938-04-01)','9','1938-04-01','2000-12-31','3','1911000001','Berlin');
 --
 INSERT INTO ortsteile_bezirke_work VALUES('1911000401','Charlottenburg (Gebietsreform - 1938-04-01)','10','1938-04-01','2004-09-29','3','1902010700','Charlottenburg');
 ---
-INSERT INTO ortsteile_bezirke_work VALUES('1902010800','Spandau (Gebietsreform - 1938-04-01)','9','1938-04-01','1945-08-30','3','1911000001','Berlin') ;
+INSERT INTO ortsteile_bezirke_work VALUES('1902010800','Spandau (Gebietsreform - 1938-04-01)','9','1938-04-01','1945-08-30','3','1911000001','Berlin');
 --
 -- SELECT id_admin||''','''||name FROM berlin_admin WHERE ((changed_type=2) AND (id_belongs_to='1902010800'));
 INSERT INTO ortsteile_bezirke_work VALUES('1911000501','Spandau (Gebietsreform - 1938-04-01)','10','1938-04-01','2000-12-31','3','1902010800','Spandau');
@@ -464,7 +468,7 @@ INSERT INTO ortsteile_bezirke_work VALUES('1911000506','Kladow (Gebietsreform - 
 INSERT INTO ortsteile_bezirke_work VALUES('1911000507','Hakenfelde (Gebietsreform - 1938-04-01)','10','1938-04-01','1972-06-02','3','1902010800','Spandau');
 INSERT INTO ortsteile_bezirke_work VALUES('1911000509','Wilhelmstadt (Gebietsreform - 1938-04-01)','10','1938-04-01','1945-08-30','3','1902010800','Spandau');
 ---
-INSERT INTO ortsteile_bezirke_work VALUES('1902010900','Wilmersdorf (Gebietsreform - 1938-04-01)','9','1938-04-01','2001-12-31','3','1911000001','Berlin') ;
+INSERT INTO ortsteile_bezirke_work VALUES('1902010900','Wilmersdorf (Gebietsreform - 1938-04-01)','9','1938-04-01','2000-12-31','3','1911000001','Berlin');
 --
 -- SELECT id_admin||''','''||name FROM berlin_admin WHERE ((changed_type=2) AND (id_belongs_to='1902010900'));
 INSERT INTO ortsteile_bezirke_work VALUES('1911000402','Wilmersdorf (Gebietsreform - 1938-04-01)','10','1938-04-01','2004-09-29','3','1902010900','Wilmersdorf');
@@ -479,42 +483,43 @@ INSERT INTO ortsteile_bezirke_work VALUES('1911000605','Dahlem (Gebietsreform - 
 INSERT INTO ortsteile_bezirke_work VALUES('1911000606','Nikolassee (Gebietsreform - 1938-04-01)','10','1938-04-01','3000-01-01','3','1902011000','Zehlendorf');
 INSERT INTO ortsteile_bezirke_work VALUES('1911000607','Wannsee (Gebietsreform - 1938-04-01)','10','1938-04-01','1972-06-02','3','1902011000','Zehlendorf');
 ---
-INSERT INTO ortsteile_bezirke_work VALUES('1902011100','Schöneberg (Gebietsreform - 1938-04-01)','9','1938-04-01','2001-12-31','3','1911000001','Berlin');
+INSERT INTO ortsteile_bezirke_work VALUES('1902011100','Schöneberg (Gebietsreform - 1938-04-01)','9','1938-04-01','2000-12-31','3','1911000001','Berlin');
 --
 INSERT INTO ortsteile_bezirke_work VALUES('1911000701','Schöneberg (Gebietsreform - 1938-04-01)','10','1938-04-01','3000-01-01','3','1902011100','Schöneberg');
-INSERT INTO ortsteile_bezirke_work VALUES('1911000702','Friedenau (Gebietsreform - 1938-04-01)','10','1938-04-01','3000-01-01','3','1902011100','Schöneberg') ;
+INSERT INTO ortsteile_bezirke_work VALUES('1911000702','Friedenau (Gebietsreform - 1938-04-01)','10','1938-04-01','3000-01-01','3','1902011100','Schöneberg');
 ---
-INSERT INTO ortsteile_bezirke_work VALUES('1902011200','Steglitz (Gebietsreform - 1938-04-01)','9','1938-04-01','2001-12-31','3','1911000001','Berlin') ;
+INSERT INTO ortsteile_bezirke_work VALUES('1902011200','Steglitz (Gebietsreform - 1938-04-01)','9','1938-04-01','2000-12-31','3','1911000001','Berlin');
 --
 INSERT INTO ortsteile_bezirke_work VALUES('1911000601','Steglitz (Gebietsreform - 1938-04-01)','10','1938-04-01','3000-01-01','3','1902011200','Steglitz');
 INSERT INTO ortsteile_bezirke_work VALUES('1911000602','Lichterfelde (Gebietsreform - 1938-04-01)','10','1938-04-01','3000-01-01','3','1902011200','Steglitz');
 INSERT INTO ortsteile_bezirke_work VALUES('1911000603','Lankwitz (Gebietsreform - 1938-04-01)','10','1938-04-01','3000-01-01','3','1902011200','Steglitz');
 ---
-INSERT INTO ortsteile_bezirke_work VALUES('1902011300','Tempelhof (Gebietsreform - 1938-04-01)','9','1938-04-01','2001-12-31','3','1911000001','Berlin') ;
+INSERT INTO ortsteile_bezirke_work VALUES('1902011300','Tempelhof (Gebietsreform - 1938-04-01)','9','1938-04-01','2000-12-31','3','1911000001','Berlin');
 --
 INSERT INTO ortsteile_bezirke_work VALUES('1911000703','Tempelhof (Gebietsreform - 1938-04-01)','10','1938-04-01','3000-01-01','3','1902011300','Tempelhof');
 INSERT INTO ortsteile_bezirke_work VALUES('1911000704','Mariendorf (Gebietsreform - 1938-04-01)','10','1938-04-01','3000-01-01','3','1902011300','Tempelhof');
 INSERT INTO ortsteile_bezirke_work VALUES('1911000705','Marienfelde (Gebietsreform - 1938-04-01)','10','1938-04-01','3000-01-01','3','1902011300','Tempelhof');
 INSERT INTO ortsteile_bezirke_work VALUES('1911000706','Lichtenrade (Gebietsreform - 1938-04-01)','10','1938-04-01','3000-01-01','3','1902011300','Tempelhof');
 ---
-INSERT INTO ortsteile_bezirke_work VALUES('1902011400','Neukölln (Gebietsreform - 1938-04-01)','9','1938-04-01','1972-06-02','3','1911000001','Berlin') ;
+INSERT INTO ortsteile_bezirke_work VALUES('1902011400','Neukölln (Gebietsreform - 1938-04-01)','9','1938-04-01','1972-06-02','3','1911000001','Berlin');
 --
-INSERT INTO ortsteile_bezirke_work VALUES('1911000801','Neukölln (Gebietsreform - 1938-04-01)','10','1938-04-01','3000-01-01','3','1902011400','Neukölln');
+INSERT INTO ortsteile_bezirke_work VALUES('1911000801','Neukölln (Gebietsreform - 1938-04-01)','10','1938-04-01','1972-06-02','3','1902011400','Neukölln');
 INSERT INTO ortsteile_bezirke_work VALUES('1911000802','Britz (Gebietsreform - 1938-04-01)','10','1938-04-01','3000-01-01','3','1902011400','Neukölln');
-INSERT INTO ortsteile_bezirke_work VALUES('1911000803','Buckow (Gebietsreform - 1938-04-01)','10','1938-04-01','3000-01-01','3','1902011400','Neukölln');
+INSERT INTO ortsteile_bezirke_work VALUES('1911000803','Buckow (Gebietsreform - 1938-04-01)','10','1938-04-01','2002-11-06','3','1902011400','Neukölln');
 INSERT INTO ortsteile_bezirke_work VALUES('1911000804','Rudow (Gebietsreform - 1938-04-01)','10','1938-04-01','3000-01-01','3','1902011400','Neukölln');
 ---
-INSERT INTO ortsteile_bezirke_work VALUES('1902011500','Treptow (Gebietsreform - 1938-04-01)','9','1938-04-01','1972-06-02','3','1911000001','Berlin') ;
+INSERT INTO ortsteile_bezirke_work VALUES('1902011500','Treptow (Gebietsreform - 1938-04-01)','9','1938-04-01','1945-08-30','3','1911000001','Berlin');
 --
-INSERT INTO ortsteile_bezirke_work VALUES('1911000901','Treptow (Gebietsreform - 1938-04-01)','10','1938-04-01','3000-01-01','3','1902011500','Treptow');
+INSERT INTO ortsteile_bezirke_work VALUES('1911000901','Treptow (Gebietsreform - 1938-04-01)','10','1938-04-01','1945-08-30','3','1902011500','Treptow');
 INSERT INTO ortsteile_bezirke_work VALUES('1911000904','Johannisthal (Gebietsreform - 1938-04-01)','10','1938-04-01','3000-01-01','3','1902011500','Treptow');
 INSERT INTO ortsteile_bezirke_work VALUES('1911000905','Niederschöneweide (Gebietsreform - 1938-04-01)','10','1938-04-01','3000-01-01','3','1902011500','Treptow');
 INSERT INTO ortsteile_bezirke_work VALUES('1911000906','Altglienicke (Gebietsreform - 1938-04-01)','10','1938-04-01','3000-01-01','3','1902011500','Treptow');
 INSERT INTO ortsteile_bezirke_work VALUES('1911000907','Adlershof (Gebietsreform - 1938-04-01)','10','1938-04-01','3000-01-01','3','1902011500','Treptow');
 ---
-INSERT INTO ortsteile_bezirke_work VALUES('1902011600','Köpenick (Gebietsreform - 1938-04-01)','9','1938-04-01','2001-12-31','3','1911000001','Berlin') ;
+INSERT INTO ortsteile_bezirke_work VALUES('1902011600','Köpenick (Gebietsreform - 1938-04-01)','9','1938-04-01','2000-12-31','3','1911000001','Berlin');
 --
 INSERT INTO ortsteile_bezirke_work VALUES('1911000908','Bohnsdorf (Gebietsreform - 1938-04-01)','10','1938-04-01','3000-01-01','3','1902011600','Köpenick');
+INSERT INTO ortsteile_bezirke_work VALUES('1911000909','Oberschöneweide (Gebietsreform - 1938-04-01)','10','1938-04-01','3000-01-01','3',1902011600,'Köpenick');
 INSERT INTO ortsteile_bezirke_work VALUES('1911000910','Köpenick (Gebietsreform - 1938-04-01)','10','1938-04-01','3000-01-01','3','1902011600','Köpenick');
 INSERT INTO ortsteile_bezirke_work VALUES('1911000911','Friedrichshagen (Gebietsreform - 1938-04-01)','10','1938-04-01','3000-01-01','3','1902011600','Köpenick');
 INSERT INTO ortsteile_bezirke_work VALUES('1911000912','Rahnsdorf (Gebietsreform - 1938-04-01)','10','1938-04-01','3000-01-01','3','1902011600','Köpenick');
@@ -522,27 +527,28 @@ INSERT INTO ortsteile_bezirke_work VALUES('1911000913','Grünau (Gebietsreform -
 INSERT INTO ortsteile_bezirke_work VALUES('1911000914','Müggelheim (Gebietsreform - 1938-04-01)','10','1938-04-01','3000-01-01','3','1902011600','Köpenick');
 INSERT INTO ortsteile_bezirke_work VALUES('1911000915','Schmöckwitz (Gebietsreform - 1938-04-01)','10','1938-04-01','3000-01-01','3','1902011600','Köpenick');
 ---
-INSERT INTO ortsteile_bezirke_work VALUES('1902011700','Lichtenberg (Gebietsreform - 1938-04-01)','9','1938-04-01','2001-12-31','3','1911000001','Berlin') ;
---
-INSERT INTO ortsteile_bezirke_work VALUES('1911001002','Biesdorf (Gebietsreform - 1938-04-01)','10','1938-04-01','3000-01-01','3','1902011700','Lichtenberg');
-INSERT INTO ortsteile_bezirke_work VALUES('1911001003','Kaulsdorf (Gebietsreform - 1938-04-01)','10','1938-04-01','3000-01-01','3','1902011700','Lichtenberg');
+INSERT INTO ortsteile_bezirke_work VALUES('1902011700','Lichtenberg (Gebietsreform - 1938-04-01)','9','1938-04-01','1979-01-04','3','1911000001','Berlin');
+INSERT INTO ortsteile_bezirke_work VALUES('1911001002','Biesdorf (Gebietsreform - 1938-04-01)','10','1938-04-01','1979-01-04','3','1902011700','Lichtenberg');
+INSERT INTO ortsteile_bezirke_work VALUES('1911001003','Kaulsdorf (Gebietsreform - 1938-04-01)','10','1938-04-01','1986-05-31','3','1902011700','Lichtenberg');
 INSERT INTO ortsteile_bezirke_work VALUES('1911001004','Mahlsdorf (Gebietsreform - 1938-04-01)','10','1938-04-01','3000-01-01','3','1902011700','Lichtenberg');
-INSERT INTO ortsteile_bezirke_work VALUES('1911001005','Hellersdorf (Gebietsreform - 1938-04-01)','10','1938-04-01','3000-01-01','3','1902011700','Lichtenberg');
-INSERT INTO ortsteile_bezirke_work VALUES('1911001101','Friedrichsfelde (Gebietsreform - 1938-04-01)','10','1938-04-01','3000-01-01','3','1902011700','Lichtenberg');
+-- '1911001005','Hellersdorf' : no changes
+INSERT INTO ortsteile_bezirke_work VALUES('1911001101','Friedrichsfelde (Gebietsreform - 1938-04-01)','10','1938-04-01','1979-01-04','3','1902011700','Lichtenberg');
 INSERT INTO ortsteile_bezirke_work VALUES('1911001102','Karlshorst (Gebietsreform - 1938-04-01)','10','1938-04-01','3000-01-01','3','1902011700','Lichtenberg');
-INSERT INTO ortsteile_bezirke_work VALUES('1911001103','Lichtenberg (Gebietsreform - 1938-04-01)','10','1938-04-01','2001-12-31','3','1902011700','Lichtenberg');
+INSERT INTO ortsteile_bezirke_work VALUES('1911001103','Lichtenberg (Gebietsreform - 1938-04-01)','10','1938-04-01','2000-12-31','3','1902011700','Lichtenberg');
+-- '1911001001','Marzahn' : no changes
 ---
-INSERT INTO ortsteile_bezirke_work VALUES('1902011800','Weißensee (Gebietsreform - 1938-04-01)','9','1938-04-01','1985-08-31','3','1911000001','Berlin') ;
+---
+INSERT INTO ortsteile_bezirke_work VALUES('1902011800','Weißensee (Gebietsreform - 1938-04-01)','9','1938-04-01','1985-08-31','3','1911000001','Berlin');
 --
 INSERT INTO ortsteile_bezirke_work VALUES('1911000302','Weißensee (Gebietsreform - 1938-04-01)','10','1938-04-01','1985-08-31','3','1902011800','Weißensee');
-INSERT INTO ortsteile_bezirke_work VALUES('1911001104','Falkenberg (Gebietsreform - 1938-04-01)','10','1938-04-01','1985-08-31','3','1902011800','Weißensee');
-INSERT INTO ortsteile_bezirke_work VALUES('1911001105','Hohenschönhausen (Gebietsreform - 1938-04-01)','10','1938-04-01','1985-08-31','3','1902011800','Weißensee');
+INSERT INTO ortsteile_bezirke_work VALUES('1911001104','Falkenberg (Gebietsreform - 1938-04-01)','10','1938-04-01','1979-01-04','3','1902011800','Weißensee');
+INSERT INTO ortsteile_bezirke_work VALUES('1911001105','Hohenschönhausen (Gebietsreform - 1938-04-01)','10','1938-04-01','1979-01-04','3','1902011800','Weißensee');
 INSERT INTO ortsteile_bezirke_work VALUES('1911001106','Malchow (Gebietsreform - 1938-04-01)','10','1938-04-01','1985-08-31','3','1902011800','Weißensee');
-INSERT INTO ortsteile_bezirke_work VALUES('1911001107','Wartenberg (Gebietsreform - 1938-04-01)','10','1938-04-01','1985-08-31','3','1902011800','Weißensee');
+INSERT INTO ortsteile_bezirke_work VALUES('1911001107','Wartenberg (Gebietsreform - 1938-04-01)','10','1938-04-01','1979-01-04','3','1902011800','Weißensee');
 ---
-INSERT INTO ortsteile_bezirke_work VALUES('1902011900','Pankow (Gebietsreform - 1938-04-01)','9','1938-04-01','1985-08-31','3','1911000001','Berlin') ;
+INSERT INTO ortsteile_bezirke_work VALUES('1902011900','Pankow (Gebietsreform - 1938-04-01)','9','1938-04-01','1985-08-31','3','1911000001','Berlin');
 --
-INSERT INTO ortsteile_bezirke_work VALUES('1911000303','Blankenburg (Gebietsreform - 1938-04-01)','10','1938-04-01','3000-01-01','3','1902011900','Pankow');
+INSERT INTO ortsteile_bezirke_work VALUES('1911000303','Blankenburg (Gebietsreform - 1938-04-01)','10','1938-04-01','1985-09-31','3','1902011900','Pankow');
 INSERT INTO ortsteile_bezirke_work VALUES('1911000304','Heinersdorf (Gebietsreform - 1938-04-01)','10','1938-04-01','3000-01-01','3','1902011900','Pankow');
 INSERT INTO ortsteile_bezirke_work VALUES('1911000305','Karow (Gebietsreform - 1938-04-01)','10','1938-04-01','3000-01-01','3','1902011900','Pankow');
 INSERT INTO ortsteile_bezirke_work VALUES('1911000307','Pankow (Gebietsreform - 1938-04-01)','10','1938-04-01','3000-01-01','3','1902011900','Pankow');
@@ -567,12 +573,16 @@ INSERT INTO ortsteile_bezirke_work VALUES('1911001210','Wilhelmsruh (Gebietsrefo
 ---
 -- 1945-08-31 1972-06-02  (Gebietsaustausch - 1945-08-31)
 ---
-INSERT INTO ortsteile_bezirke_work VALUES('1902010800','Spandau (Gebietsaustausch - 1945-08-31)','9','1945-08-31','1972-06-03','3','1911000001','Berlin');
+INSERT INTO ortsteile_bezirke_work VALUES('1902010800','Spandau (Gebietsaustausch - 1945-08-31)','9','1945-08-31','1972-06-02','3','1911000001','Berlin');
 --
 INSERT INTO ortsteile_bezirke_work VALUES('1911000504','Staaken (Gebietsaustausch - 1945-08-31)','10','1945-08-31','1990-10-02','3','1902010800','Spandau');
 INSERT INTO ortsteile_bezirke_work VALUES('1911000505','Gatow (Gebietsaustausch - 1945-08-31)','10','1945-08-31','3000-01-01','3','1902010800','Spandau');
 INSERT INTO ortsteile_bezirke_work VALUES('1911000506','Kladow (Gebietsaustausch - 1945-08-31)','10','1945-08-31','1988-06-30','3','1902010800','Spandau');
 INSERT INTO ortsteile_bezirke_work VALUES('1911000509','Wilhelmstadt (Gebietsaustausch - 1945-08-31)','10','1945-08-31','1988-06-30','3','1902010800','Spandau');
+--
+INSERT INTO ortsteile_bezirke_work VALUES('1902011500','Treptow (Ortsteil Baumschulenweg - 1945-08-31)','9','1945-08-31','1997-12-17','3','1911000001','Berlin');
+INSERT INTO ortsteile_bezirke_work VALUES('1911000901','Treptow (Ortsteil Baumschulenweg - 1945-08-31)','10','1945-08-31','1997-12-17','3','1902011500','Treptow');
+INSERT INTO ortsteile_bezirke_work VALUES(1911000903,'Baumschulenweg','10','1945-08-31','3000-01-01','3',1902011500,'Treptow');
 ---
 -- 1972-06-03 1985-08-31 (Gebietsaustausch - 1972-06-03)
 ---
@@ -582,18 +592,48 @@ INSERT INTO ortsteile_bezirke_work VALUES('1902011000','Zehlendorf (Gebietsausta
 INSERT INTO ortsteile_bezirke_work VALUES('1911000607','Wannsee (Gebietsaustausch - 1972-06-03)','10','1972-06-03','1988-06-30','3','1902011000','Zehlendorf');
 INSERT INTO ortsteile_bezirke_work VALUES('1902012000','Reinickendorf (Gebietsaustausch - 1972-06-03)','9','1972-06-03','1988-06-30','3','1911000001','Berlin');
 INSERT INTO ortsteile_bezirke_work VALUES('1911001205','Frohnau (Gebietsaustausch - 1972-06-03)','10','1972-06-03','3000-01-01','3','1902012000','Reinickendorf');
+INSERT INTO ortsteile_bezirke_work VALUES('1902011400','Neukölln (Gebietsaustausch - 1972-06-03)','9','1972-06-03','2000-12-31','3','1911000001','Berlin');
+INSERT INTO ortsteile_bezirke_work VALUES('1911000801','Neukölln (Gebietsaustausch - 1972-06-03)','10','1972-06-03','3000-01-01','3','1902011400','Neukölln');
+---
+-- 1979-01-05 1985-08-31  (Gründung Bezirk Marzahn - 1979-01-05)
+---
+-- bis 1979-01-04 1902011700 Lichtenberg
+-- Der Bezirk Marzahn war von 1979 bis 2000 ein Verwaltungsbezirk von Berlin. 
+-- Er umfasste zuletzt die Ortsteile Marzahn und Biesdorf. 
+-- Bis 1986 gehörten auch die Ortsteile Hellersdorf, Kaulsdorf und Mahlsdorf zum Bezirk Marzahn.
+-- ab 1986-06-01 Bezirk Hellersdorf
+--
+INSERT INTO ortsteile_bezirke_work VALUES('1902011700','Lichtenberg (Gründung Bezirk Marzahn - 1979-01-05)','9','1979-01-05','2000-12-31','3','1911000001','Berlin');
+INSERT INTO ortsteile_bezirke_work VALUES('1902012100','Marzahn (Gründung Bezirk Marzahn - 1979-01-05)','9','1979-01-05','1986-05-31','3','1911000001','Berlin');
+INSERT INTO ortsteile_bezirke_work VALUES('1911001001','Marzahn (Gründung Bezirk Marzahn - 1979-01-05)','10','1979-01-05','3000-01-01','3','1902012100','Marzahn');
+INSERT INTO ortsteile_bezirke_work VALUES('1911001005','Hellersdorf (Gründung Bezirk Marzahn - 1979-01-05)','10','1979-01-05','1986-05-31','3','1902012100','Marzahn');
+INSERT INTO ortsteile_bezirke_work VALUES('1911001002','Biesdorf (Gründung Bezirk Marzahn - 1979-01-05)','10','1979-01-05','3000-01-01','3','1902011700','Lichtenberg');
+INSERT INTO ortsteile_bezirke_work VALUES('1911001101','Friedrichsfelde (Gründung Bezirk Marzahn - 1979-01-05)','10','1979-01-05','3000-01-01','3','1902011700','Lichtenberg');
+INSERT INTO ortsteile_bezirke_work VALUES('1911001104','Falkenberg (Gründung Bezirk Marzahn - 1979-01-05)','10','1979-01-05','1985-08-31','3','1902011800','Weißensee');
+INSERT INTO ortsteile_bezirke_work VALUES('1911001107','Wartenberg (Gründung Bezirk Marzahn - 1979-01-05)','10','1979-01-05','1985-08-31','3','1902011800','Weißensee');
+INSERT INTO ortsteile_bezirke_work VALUES('1911001105','Hohenschönhausen (Gründung Bezirk Marzahn - 1979-01-05)','10','1979-01-05','1985-08-31','3','1902011800','Weißensee');
+-- Hohenschönhausen
 ---
 -- 1985-09-01 1988-06-30  (Gründung Bezirk Hohenschönhausen - 1985-09-01)
 ---
-INSERT INTO ortsteile_bezirke_work VALUES('1902011800','Weißensee (Gründung Bezirk Hohenschönhausen - 1985-09-01)','9','1985-09-01','2001-12-31','3','1911000001','Berlin');
-INSERT INTO ortsteile_bezirke_work VALUES('1902012200','Hohenschönhausen (Gründung Bezirk Hohenschönhausen - 1985-09-01)','9','1985-09-01','2001-12-31','3','1911000001','Berlin');
-INSERT INTO ortsteile_bezirke_work VALUES('1911000302','Weißensee (Gründung Bezirk Hohenschönhausen - 1985-09-01)','10','1985-09-01','2001-12-31','3','1902011800','Weißensee');
-INSERT INTO ortsteile_bezirke_work VALUES('1911000306','Stadtrandsiedlung Malchow (Gründung Bezirk Hohenschönhausen - 1985-09-01)','10','1985-09-01','2001-12-31','3','1902011800','Weißensee');--
-INSERT INTO ortsteile_bezirke_work VALUES('1911001104','Falkenberg (Gründung Bezirk Hohenschönhausen - 1985-09-01)','10','1985-09-01','2001-12-31','3','1902012200','Hohenschönhausen');
-INSERT INTO ortsteile_bezirke_work VALUES('1911001105','Hohenschönhausen (Gründung Bezirk Hohenschönhausen - 1985-09-01)','10','1985-09-01','2001-12-31','3','1902012200','Hohenschönhausen');
-INSERT INTO ortsteile_bezirke_work VALUES('1911001106','Malchow (Gründung Bezirk Hohenschönhausen - 1985-09-01)','10','1985-09-01','2001-12-31','3','1902012200','Hohenschönhausen');
-INSERT INTO ortsteile_bezirke_work VALUES('1911001107','Wartenberg (Gründung Bezirk Hohenschönhausen - 1985-09-01)','10','1985-09-01','2001-12-31','3','1902012200','Hohenschönhausen');
+INSERT INTO ortsteile_bezirke_work VALUES('1902011900','Pankow (Gründung Bezirk Hohenschönhausen - 1985-09-01)','9','1985-09-01','2000-12-31','3','1911000001','Berlin');
+INSERT INTO ortsteile_bezirke_work VALUES('1902011800','Weißensee (Gründung Bezirk Hohenschönhausen - 1985-09-01)','9','1985-09-01','2000-12-31','3','1911000001','Berlin');
+INSERT INTO ortsteile_bezirke_work VALUES('1902012200','Hohenschönhausen (Gründung Bezirk Hohenschönhausen - 1985-09-01)','9','1985-09-01','2000-12-31','3','1911000001','Berlin');
+INSERT INTO ortsteile_bezirke_work VALUES('1911000302','Weißensee (Gründung Bezirk Hohenschönhausen - 1985-09-01)','10','1985-09-01','2000-12-31','3','1902011800','Weißensee');
+INSERT INTO ortsteile_bezirke_work VALUES('1911000303','Blankenburg (Gründung Bezirk Hohenschönhausen - 1985-09-01)','10','1985-09-01','2000-12-31','3','1902011800','Weißensee');
+INSERT INTO ortsteile_bezirke_work VALUES('1911000306','Stadtrandsiedlung Malchow (Gründung Bezirk Hohenschönhausen - 1985-09-01)','10','1985-09-01','2000-12-31','3','1902011800','Weißensee');
+INSERT INTO ortsteile_bezirke_work VALUES('1911001104','Falkenberg (Gründung Bezirk Hohenschönhausen - 1985-09-01)','10','1985-09-01','3000-01-01','3','1902012200','Hohenschönhausen');
+INSERT INTO ortsteile_bezirke_work VALUES('1911001105','Hohenschönhausen (Gründung Bezirk Hohenschönhausen - 1985-09-01)','10','1985-09-01','2000-12-31','3','1902012200','Hohenschönhausen');
+INSERT INTO ortsteile_bezirke_work VALUES('1911001106','Malchow (Gründung Bezirk Hohenschönhausen - 1985-09-01)','10','1985-09-01','2000-12-31','3','1902012200','Hohenschönhausen');
+INSERT INTO ortsteile_bezirke_work VALUES('1911001107','Wartenberg (Gründung Bezirk Hohenschönhausen - 1985-09-01)','10','1985-09-01','2000-12-31','3','1902012200','Hohenschönhausen');
 ---
+-- 1986-06-01 2000-12-31  (Bezirk Hellersdorf - 1986-06-01)
+---
+INSERT INTO ortsteile_bezirke_work VALUES('1902012100','Marzahn (Gründung Bezirk Hellersdorf - 1986-06-01)','9','1986-06-01','2000-12-31','3','1911000001','Berlin');
+INSERT INTO ortsteile_bezirke_work VALUES('1902012300','Hellersdorf (Gründung Bezirk Hellersdorf - 1986-06-01)','9','1986-06-01','2000-12-31','3','1911000001','Berlin');
+INSERT INTO ortsteile_bezirke_work VALUES('1911001005','Hellersdorf (Gründung Bezirk Hellersdorf - 1986-06-01)','10','1986-06-01','3000-01-01','3','1902012300','Hellersdorf');
+INSERT INTO ortsteile_bezirke_work VALUES('1911001003','Kaulsdorf (Gründung Bezirk Hellersdorf - 1986-06-01)','10','1986-06-01','3000-01-01','3','1902012300','Hellersdorf');
+-- Kaulsdorf, Mahlsdorf
 ---
 -- 1988-07-01 1990-10-02 (Gebietsaustausch - 1988-07-01)
 ---
@@ -601,9 +641,10 @@ INSERT INTO ortsteile_bezirke_work VALUES('1902010100','Mitte (Gebietsaustausch 
 INSERT INTO ortsteile_bezirke_work VALUES('1911000101','Mitte (Gebietsaustausch - 1988-07-01)','10','1988-07-01','3000-01-01','3','1902010100','Mitte');
 INSERT INTO ortsteile_bezirke_work VALUES('1902010300','Wedding (Gebietsaustausch - 1988-07-01)','9','1988-07-01','2000-12-31','3','1911000001','Berlin');
 INSERT INTO ortsteile_bezirke_work VALUES('1911000105','Wedding (Gebietsaustausch - 1988-07-01)','10','1988-07-01','3000-01-01','3','1902010300','Wedding');
+INSERT INTO ortsteile_bezirke_work VALUES('1902010600','Kreuzberg (Gebietsaustausch - 1988-07-01)','9','1988-07-01','2000-12-31','3','1911000001','Berlin');
 INSERT INTO ortsteile_bezirke_work VALUES('1911000202','Kreuzberg (Gebietsaustausch - 1988-07-01)','10','1988-07-01','3000-01-01','3','1902010600','Kreuzberg');
 INSERT INTO ortsteile_bezirke_work VALUES('1902010200','Tiergarten (Gebietsreform - 1938-04-01)','9','1988-07-01','3000-01-01','3','1911000001','Berlin');
-INSERT INTO ortsteile_bezirke_work VALUES('1911000104','Tiergarten (Gebietsaustausch - 1988-07-01)','10','1988-07-01','3000-01-01','3','1902010200','Tiergarten');
+INSERT INTO ortsteile_bezirke_work VALUES('1911000104','Tiergarten (Gebietsaustausch - 1988-07-01)','10','1988-07-01','2000-12-31','3','1902010200','Tiergarten');
 INSERT INTO ortsteile_bezirke_work VALUES('1902010800','Spandau (Gebietsaustausch - 1988-07-01)','9','1988-07-01','1990-10-02','3','1911000001','Berlin');
 INSERT INTO ortsteile_bezirke_work VALUES('1911000507','Hakenfelde (Gebietsaustausch - 1988-07-01)','10','1988-07-01','3000-01-01','3','1902010800','Spandau');
 INSERT INTO ortsteile_bezirke_work VALUES('1911000506','Kladow (Gebietsaustausch - 1988-07-01)','10','1988-07-01','3000-01-01','3','1902010800','Spandau');
@@ -617,12 +658,29 @@ INSERT INTO ortsteile_bezirke_work VALUES('1911001203','Konradshöhe (Gebietsaus
 ---
 INSERT INTO ortsteile_bezirke_work VALUES('1902010800','Spandau (Wiedervereinigung - 1990-10-03)','9','1990-10-03','2000-12-31','3','1911000001','Berlin');
 INSERT INTO ortsteile_bezirke_work VALUES('1911000504','Staaken (Wiedervereinigung - 1990-10-03)','10','1990-10-03','3000-01-01','3','1902010800','Spandau');
+--
+---
+-- 1997-12-18 Ortsteil Plänterwald - 1997-12-18
+---
+INSERT INTO ortsteile_bezirke_work VALUES('1902011500','Treptow (Ortsteil Plänterwald - 1997-12-18)','9','1997-12-18','2000-12-31','3','1911000001','Berlin');
+INSERT INTO ortsteile_bezirke_work VALUES('1911000901','Treptow (Ortsteil Plänterwald - 1997-12-18)','10','1997-12-18','3000-01-01','3','1902011500','Treptow');
+INSERT INTO ortsteile_bezirke_work VALUES(1911000902,'Plänterwald','10','1997-12-18','3000-01-01','3',1902011500,'Treptow');
 ---
 -- 2001-01-01 3000-01-01 (neue Ortsteile)
 ---
+INSERT INTO ortsteile_bezirke_work VALUES(1911001210,'Märkisches Viertel','10','2001-01-01','3000-01-01','3',1911001200,'Reinickendorf');
 ---
--- 2001-01-01 3001-01-01 (Bezirks reform - 2001-01-01)
+-- 2001-01-01 3000-01-01 (Bezirksreform - 2001-01-01)
 ---
+INSERT INTO ortsteile_bezirke_work VALUES('1911000302','Weißensee (Bezirksreform - 2001-01-01)','10','2001-01-01','3000-01-01','3','1911000300','Pankow');
+INSERT INTO ortsteile_bezirke_work VALUES('1911000303','Blankenburg (Bezirksreform - 2001-01-01)','10','2001-01-01','3000-01-01','3','1911000300','Pankow');
+INSERT INTO ortsteile_bezirke_work VALUES('1911000306','Stadtrandsiedlung Malchow (Bezirksreform - 2001-01-01)','10','2001-01-01','3000-01-01','3','1911000300','Pankow');
+INSERT INTO ortsteile_bezirke_work VALUES('1911001106','Malchow (Bezirksreform - 2001-01-01)','10','2001-01-01','3000-01-01','3','1911001100','Lichtenberg');
+INSERT INTO ortsteile_bezirke_work VALUES('1911001107','Wartenberg (Bezirksreform - 2001-01-01)','10','2001-01-01','3000-01-01','3','1911001100','Lichtenberg');
+---
+-- 2002-11-07 3000-01-01 Ortsteil Gropiusstadt - 2002-11-07
+---
+--INSERT INTO bezirke_stadt VALUES(1911000800,'Neukölln (Ortsteil Gropiusstadt - 2002-11-07)','9','2002-11-07','3000-01-01','3',1911000001,'Berlin');
 SELECT DateTime('now'),'CREATEing ortsteile_bezirke_temp. [ortsteile belongs_to new bezirke]';
 CREATE TABLE ortsteile_bezirke_temp AS
 SELECT * FROM ortsteile_bezirke_work
@@ -666,7 +724,7 @@ DROP TABLE ortsteile_bezirke_temp;
 --
 ---
 -- INSERT INTO ortsteile_bezirke_work VALUES('1902010800','Spandau (Ortsteil Falkenhagener Feld - 2001-01-01)','9','2001-01-01','3000-01-01','3','1911000001','Berlin');
-UPDATE ortsteile_bezirke_work SET valid_until='2001-12-31'
+UPDATE ortsteile_bezirke_work SET valid_until='2000-12-31'
 WHERE (id_admin LIKE '1911001100' AND valid_until='3000-01-01');
 CREATE TABLE ortsteile_bezirke_temp AS
 SELECT * FROM ortsteile_bezirke_work
@@ -687,10 +745,10 @@ DROP TABLE ortsteile_bezirke_temp;
 -- add older Ortsteile effected by new Ortsteile (their borders have also changed)
 ---
 INSERT INTO ortsteile_bezirke_work VALUES('1911000104','Tiergarten (Ortsteil Hansaviertel - 2001-01-01)','10','2001-01-01','3000-01-01','3','1911000100','Mitte');
-INSERT INTO ortsteile_bezirke_work VALUES('1911000803','Buckow (Ortsteil Gropiusstadt - 2001-01-01)','10','2001-01-01','3000-01-01','3','1911000800','Neukölln');
+INSERT INTO ortsteile_bezirke_work VALUES('1911000803','Buckow (Ortsteil Gropiusstadt - 2002-11-07)','10','2002-11-07','3000-01-01','3','1911000800','Neukölln');
 INSERT INTO ortsteile_bezirke_work VALUES('1911000312','Rosenthal (Ortsteil Wilhelmsruh - 2001-01-01)','10','2001-01-01','3000-01-01','3','1911000300','Pankow');
 -- INSERT INTO ortsteile_bezirke_work VALUES('1911000313','Wilhelmsruh (Ortsteil Wilhelmsruh - 2001-01-01)','10','2001-01-01','3000-01-01','3','11911000300','Pankow');
-INSERT INTO ortsteile_bezirke_work VALUES('1911001103','Lichtenberg (Ortsteil Fennpfuhl - 2001-01-01)','10','2001-01-01','3000-01-01','3','1911001100','Lichtenberg');
+INSERT INTO ortsteile_bezirke_work VALUES('1911001103','Lichtenberg (Ortsteil Fennpfuhl - 2001-01-01)','10','2001-01-01','2001-12-31','3','1911001100','Lichtenberg');
 INSERT INTO ortsteile_bezirke_work VALUES('1911000501','Spandau (Ortsteil Falkenhagener Feld - 2001-01-01)','10','2001-01-01','3000-01-01','3','1902010800','Spandau');
 INSERT INTO ortsteile_bezirke_work VALUES('1911000502','Haselhorst (Ortsteil Siemensstadt - 2001-01-01)','10','2001-01-01','3000-01-01','3','1902010800','Spandau');
 INSERT INTO ortsteile_bezirke_work VALUES('1911001103','Lichtenberg (Ortsteil Rummelsburg - 1938-04-01)','10','2002-01-01','3000-01-01','3','1911001100','Lichtenberg');
@@ -802,7 +860,7 @@ INSERT INTO berlin_admin
  (
   (admin_level IN (9)) AND
   (
-   (id_belongs_to NOT IN (1911000002,1911000003,1902040000,1902060000,1902100000))
+   (id_belongs_to NOT IN (1902040000,1902060000,1902100000))
   ) 
  )
  ORDER BY CAST(admin_level AS INT),id_admin,changed_type,id_belongs_to,valid_since;
@@ -818,7 +876,7 @@ INSERT INTO berlin_admin
    ((admin_level IN (10)) AND (id_belongs_to ='1911000001')) OR
    ((admin_level IN (10)) AND (valid_since >= '1920-10-01'))
   ) AND
-  (id_belongs_to NOT IN (1911000002,1911000003,1911000004,1911000005,1911000006,1911000007))
+  (id_belongs_to NOT IN (1911000004,1911000005,1911000006,1911000007))
  )
  ORDER BY CAST(admin_level AS INT),id_belongs_to,id_admin,changed_type,valid_since;
 SELECT DateTime('now'),'remove temp tables.';

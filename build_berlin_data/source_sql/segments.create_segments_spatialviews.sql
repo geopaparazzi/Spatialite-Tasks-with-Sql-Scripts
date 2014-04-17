@@ -192,7 +192,6 @@ SELECT *
 FROM berlin_ortsteil_segments segments
 WHERE
 (
- (segments.belongs_to_01||','||segments.belongs_to_02 LIKE '%19020101%') AND
  ('1920-09-30' BETWEEN segments.valid_since AND segments.valid_until)
 )
 ORDER BY name;
@@ -284,13 +283,42 @@ SELECT *
 FROM berlin_ortsteil_segments segments
 WHERE
 (
- ('1988-06-30' BETWEEN segments.valid_since AND segments.valid_until)
+ ('1979-01-04' BETWEEN segments.valid_since AND segments.valid_until)
 )
 ORDER BY name;
 ---
 INSERT INTO views_geometry_columns
  (view_name,view_geometry,view_rowid,f_table_name,f_geometry_column,read_only)
  VALUES ('segments_berlin_1972','soldner_segment','id_segment','berlin_ortsteil_segments','soldner_segment',1);
+CREATE VIEW segments_berlin_1979 AS
+-- 'Berlin (Gebietsaustausch 1972)' AS name,
+-- '1972-06-03' AS valid_from --- '1988-06-30' AS valid_to
+SELECT *
+FROM berlin_ortsteil_segments segments
+WHERE
+(
+ ('1985-08-31' BETWEEN segments.valid_since AND segments.valid_until)
+)
+ORDER BY name;
+---
+INSERT INTO views_geometry_columns
+ (view_name,view_geometry,view_rowid,f_table_name,f_geometry_column,read_only)
+ VALUES ('segments_berlin_1979','soldner_segment','id_segment','berlin_ortsteil_segments','soldner_segment',1);
+--
+CREATE VIEW segments_berlin_1985 AS
+-- 'Berlin (Gebietsaustausch 1972)' AS name,
+-- '1972-06-03' AS valid_from --- '1988-06-30' AS valid_to
+SELECT *
+FROM berlin_ortsteil_segments segments
+WHERE
+(
+ ('1988-06-30' BETWEEN segments.valid_since AND segments.valid_until)
+)
+ORDER BY name;
+---
+INSERT INTO views_geometry_columns
+ (view_name,view_geometry,view_rowid,f_table_name,f_geometry_column,read_only)
+ VALUES ('segments_berlin_1985','soldner_segment','id_segment','berlin_ortsteil_segments','soldner_segment',1);
 -- --
 CREATE VIEW segments_berlin_1988 AS
 -- 'Berlin (Gebietsaustausch 1988)' AS name,
@@ -310,6 +338,17 @@ INSERT INTO views_geometry_columns
 CREATE VIEW segments_berlin_1990 AS
 -- 'Berlin (Wiedervereinigung 1990)' AS name,
 -- '1990-10-03' AS valid_from --- '2012-05-17' AS valid_to
+SELECT *
+FROM berlin_ortsteil_segments segments
+WHERE
+(
+ ('2001-01-01' BETWEEN segments.valid_since AND segments.valid_until)
+)
+ORDER BY name;
+-- --
+CREATE VIEW segments_berlin_2001 AS
+-- 'Berlin (Bezirksreform)' AS name,
+-- '2001-01-01' AS valid_from --- '2012-05-17' AS valid_to
 SELECT *
 FROM berlin_ortsteil_segments segments
 WHERE
