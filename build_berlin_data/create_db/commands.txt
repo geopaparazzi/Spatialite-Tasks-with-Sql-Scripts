@@ -1,5 +1,7 @@
-
+-- sqlite3 berlin_admin_plz.db ".dump 'berlin_plz' " > berlin_plz.sql
 --- build berlin_administration.db [no dependencies - move (not copy) into 'source_db/' when correct]
+-- spatialite berlin_admin_plz.db < ../source_sql/import_plz.sql
+-- spatialite berlin_strassen_abschnitte.db < import_berlin_strassen_abschnitte.sql
 -- spatialite berlin_administration.db < ../source_sql/create.berlin_admin_db.sql
 --- build berlin_segments.db [in 'source_db/': 'berlin_administration.db' and 'berlin_segments.db' ; move (not copy) into 'source_db/' when correct]
 spatialite berlin_segments.db  < ../source_sql/create.berlin_segments_db.sql

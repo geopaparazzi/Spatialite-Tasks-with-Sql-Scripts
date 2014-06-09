@@ -67,7 +67,8 @@ INSERT INTO views_geometry_columns
  VALUES ('store_view','geom','rowid','store','geom',0);
 -- 
 SELECT DateTime('now'),'creating triggers for writable view: store_view';
-CREATE TRIGGER vw_ins_store_view INSTEAD OF INSERT ON store_view
+CREATE TRIGGER vw_ins_store_view 
+ INSTEAD OF INSERT ON store_view
 BEGIN
 INSERT OR REPLACE INTO store 
  (st_id,st_name,st_contact,st_ip_addr,hq_id,geom)
