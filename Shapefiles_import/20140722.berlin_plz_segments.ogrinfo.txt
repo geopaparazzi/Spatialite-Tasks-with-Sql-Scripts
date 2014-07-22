@@ -1,0 +1,47 @@
+ogrinfo berlin_plz_segments/berlin_plz_segments.shp -sql 'SELECT * FROM berlin_plz_segments' > 20140722.ogrinfo.txt
+
+
+
+INFO: Open of `berlin_plz_segments/berlin_plz_segments.shp'
+      using driver `ESRI Shapefile' successful.
+
+Layer name: berlin_plz_segments
+Geometry: Line String
+Feature Count: 23
+Extent: (18405.673758, 16709.072001) - (30386.451847, 26751.219329)
+Layer SRS WKT:
+PROJCS["DHDN_Soldner_Berlin",
+    GEOGCS["GCS_DHDN",
+        DATUM["Deutsches_Hauptdreiecksnetz",
+            SPHEROID["Bessel_1841",6377397.155,299.1528128]],
+        PRIMEM["Greenwich",0],
+        UNIT["Degree",0.017453292519943295]],
+    PROJECTION["Cassini_Soldner"],
+    PARAMETER["latitude_of_origin",52.41864827777778],
+    PARAMETER["central_meridian",13.62720366666667],
+    PARAMETER["false_easting",40000],
+    PARAMETER["false_northing",10000],
+    UNIT["Meter",1],
+    PARAMETER["scale_factor",1.0]]
+Geometry Column = _ogr_geometry_
+name: String (254.0)
+notes: String (254.0)
+admin_leve: String (254.0)
+belongs_to: String (254.0)
+belongs__1: String (254.0)
+valid_sinc: Date (10.0)
+valid_unti: Date (10.0)
+OGRFeature(berlin_plz_segments):0
+  name (String) = C,NW
+  notes (String) = (null)
+  admin_leve (String) = 3
+  belongs_to (String) = 1101780000
+  belongs__1 (String) = 1105580000
+  valid_sinc (Date) = 1862/05/15
+  valid_unti (Date) = 1873/07/24
+  LINESTRING (24409 21404,24325.60068222816335 21373.160422727149125,24174.132778051218338 21358.822013509026874,24191 21148)
+
+...
+
+and much more (deleted)
+
